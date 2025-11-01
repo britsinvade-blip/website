@@ -1,0 +1,35 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+```
+
+4. **Commit the file**
+
+This configuration tells Firebase:
+- `"public": "."` - Deploy files from the root directory (where your index.html is)
+- `"ignore"` - Don't deploy these files
+- `"rewrites"` - Send all requests to index.html (useful for single-page apps)
+
+## Your Repository Structure Should Now Look Like:
+```
+your-repo/
+├── .github/
+│   └── workflows/
+│       └── firebase-deploy.yml
+├── firebase.json
+├── index.html
+└── README.md
