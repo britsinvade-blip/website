@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Download Fastest Train - UK train times app with real-time departures for 3,000+ stations. Find platform numbers, save routes, and never miss your train. Free for iPhone & iPad.">
+    <meta name="keywords" content="UK train times app, National Rail app, live train departures UK, train platform finder, UK train schedule app, real-time train updates UK, fastest train finder UK, which platform is my train, save train routes app, British railway app">
+    <meta name="author" content="Robert Taylor (Tayloriellos)">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Fastest Train - UK Train Times & Live Departures App">
+    <meta property="og:description" content="Real-time train information for 3,000+ UK stations. Find platforms, save routes, never miss a train. Free on iOS!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tayloriellos.com/fastesttrain">
+    <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/17/d9/3d17d9db-9db5-bb03-1a80-b5497998e3f1/Simulator_Screenshot_-_iPhone_17_-_2025-10-30_at_11.39.15.png/460x1022bb.webp">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fastest Train - UK Train Times App">
+    <meta name="twitter:description" content="Real-time departures for 3,000+ UK stations. Free for iOS!">
+    
+    <title>Fastest Train | UK Train Times & Live Departures App for iPhone & iPad</title>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Fastest Train",
+      "operatingSystem": "iOS",
+      "applicationCategory": "TravelApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      "description": "Real-time UK train departure information and platform finder for almost 3,000 National Rail stations. Save favorite routes and never miss your train.",
+      "featureList": [
+        "Real-time UK National Rail data",
+        "Platform finder",
+        "Save favorite routes",
+        "3,000+ station coverage",
+        "iPhone and iPad support"
+      ]
+    }
+    </script>
+    
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60c031cb-9c03-40f1-9044-ea4e0c00dae6" data-blockingmode="auto" type="text/javascript"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S1FFNJK5J7');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --primary-dark: #764ba2;
+            --accent: #48bb78;
+            --train-blue: #1e40af;
+            --train-red: #dc2626;
+            --dark: #2d3748;
+            --gray: #718096;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--train-blue) 0%, var(--primary) 100%);
+            color: white;
+            padding: 150px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            background: var(--white);
+            border-radius: 27px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            animation: fadeInUp 0.8s ease 0.1s backwards;
+        }
+
+        .hero .tagline {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero .badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--train-blue);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Stats Highlight */
+        .stats-highlight {
+            background: var(--white);
+            padding: 60px 20px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--train-blue) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        /* Screenshot Gallery */
+        .gallery-section {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            font-size: 1.2em;
+            color: var(--gray);
+        }
+
+        .screenshot-carousel {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar-track {
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar-thumb {
+            background: var(--train-blue);
+            border-radius: 10px;
+        }
+
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+        }
+
+        .screenshot-item img {
+            height: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--train-blue) 0%, var(--primary) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 800;
+        }
+
+        .step-content h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Use Cases Section */
+        .use-cases {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .use-case-card {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .use-case-emoji {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .use-case-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .use-case-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Coverage Section */
+        .coverage-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--train-blue) 0%, var(--primary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .coverage-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .coverage-section p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .coverage-map {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coverage-map h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .station-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: left;
+        }
+
+        .station-list li {
+            list-style: none;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        /* Download CTA Section */
+        .download-cta {
+            padding: 100px 20px;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .download-cta h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .download-cta p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            color: var(--gray);
+        }
+
+        /* Related Apps */
+        .related-apps {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .app-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .app-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+        }
+
+        .app-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .app-card p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .app-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .app-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section p {
+            color: #a0aec0;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .section-header h2 {
+                font-size: 2em;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .screenshot-item img {
+                height: 400px;
+            }
+
+            .stat-number {
+                font-size: 2.5em;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Tayloriellos</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#apps">All Apps</a></li>
+                <li><a href="/tictacmore">Tic-Tac-More!</a></li>
+                <li><a href="/lingotino">Lingotino</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="app-icon-large">🚄</div>
+            <h1>Fastest Train</h1>
+            <p class="tagline">Real-time UK train information at your fingertips</p>
+            <div class="badges">
+                <span class="badge">🚉 3,000+ Stations</span>
+                <span class="badge">⚡ Real-Time Data</span>
+                <span class="badge">📍 Platform Finder</span>
+                <span class="badge">💯 Free Forever</span>
+            </div>
+            <div class="download-buttons">
+                <a href="https://apps.apple.com/us/app/fastesttrain/id6754537947" class="btn btn-primary">
+                    Download on App Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Highlight -->
+    <section class="stats-highlight">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">3K+</div>
+                <div class="stat-label">UK Stations Covered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">National Rail Data</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Ads or Hidden Costs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Always Available</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>Clean, fast, and exactly what you need</p>
+            </div>
+            <div class="screenshot-carousel">
+                <div class="screenshot-item">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/17/d9/3d17d9db-9db5-bb03-1a80-b5497998e3f1/Simulator_Screenshot_-_iPhone_17_-_2025-10-30_at_11.39.15.png/460x1022bb.webp" alt="Fastest Train Main Screen">
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/17/d9/3d17d9db-9db5-bb03-1a80-b5497998e3f1/Simulator_Screenshot_-_iPhone_17_-_2025-10-30_at_11.39.15.png/460x1022bb.webp" alt="Fastest Train Station Search">
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/17/d9/3d17d9db-9db5-bb03-1a80-b5497998e3f1/Simulator_Screenshot_-_iPhone_17_-_2025-10-30_at_11.39.15.png/460x1022bb.webp" alt="Fastest Train Departure Board">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need for Your Journey</h2>
+                <p>Powerful features in a beautifully simple package</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Departures</h3>
+                    <p>Live departure times from UK National Rail. Always up-to-date, always accurate.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Platform Finder</h3>
+                    <p>Know exactly which platform your train leaves from. No more running around the station!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚉</div>
+                    <h3>3,000+ Stations</h3>
+                    <p>Coverage of almost every National Rail station across England, Scotland, and Wales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Save Favorites</h3>
+                    <p>Bookmark your frequently used routes for instant access. Perfect for daily commutes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>iPhone & iPad</h3>
+                    <p>Works seamlessly on both iPhone and iPad. Check your trains on any device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Clean Interface</h3>
+                    <p>No clutter, no confusion. Just the information you need, when you need it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Find your train in seconds</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Search for Your Station</h3>
+                        <p>Type the name of your departure station. Search through nearly 3,000 UK stations with intelligent autocomplete.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>View Live Departures</h3>
+                        <p>See real-time departure information including times, platforms, and service status directly from National Rail.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Check Calling Points</h3>
+                        <p>Tap any train to see all stops along the route. Know exactly where your train is going.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Save Your Favorites</h3>
+                        <p>Bookmark frequently used stations for instant access. Perfect for your daily commute or regular journeys.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect For Every Journey</h2>
+                <p>Whether you're commuting, traveling, or exploring</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-emoji">💼</div>
+                    <h3>Daily Commuters</h3>
+                    <p>Save your home and work stations. Check departure times instantly every morning and evening. Never miss your train again.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-emoji">🎒</div>
+                    <h3>Travelers & Tourists</h3>
+                    <p>Explore the UK with confidence. Find trains between any stations and plan your journeys on the go.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-emoji">🏃</div>
+                    <h3>Last-Minute Dashers</h3>
+                    <p>Running late? Quickly check if you can still catch your train and which platform to run to.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-emoji">👨‍👩‍👧</div>
+                    <h3>Family Days Out</h3>
+                    <p>Plan weekend trips with ease. Check train times for the whole family and make sure everyone gets home safely.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-emoji">🎓</div>
+                    <h3>Students</h3>
+                    <p>Whether heading to campus or home for the holidays, find the best trains for your journey.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-emoji">✈️</div>
+                    <h3>Airport Connections</h3>
+                    <p>Get to Heathrow, Gatwick, or any UK airport on time. Check train connections before you leave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage-section">
+        <div class="container">
+            <h2>Nationwide Coverage</h2>
+            <p>Access real-time information for almost 3,000 stations across the UK National Rail network</p>
+            <div class="coverage-map">
+                <h3>🗺️ Major Stations Covered Include:</h3>
+                <ul class="station-list">
+                    <li>🏙️ London Stations (Paddington, King's Cross, Victoria, Waterloo...)</li>
+                    <li>🌆 Manchester Piccadilly</li>
+                    <li>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Birmingham New Street</li>
+                    <li>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh Waverley</li>
+                    <li>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Glasgow Central</li>
+                    <li>🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cardiff Central</li>
+                    <li>⚓ Liverpool Lime Street</li>
+                    <li>🎓 Leeds Station</li>
+                </ul>
+                <p style="margin-top: 30px; font-size: 1.1em;">...and 2,990+ more stations across England, Scotland, and Wales!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="download-cta">
+        <div class="container">
+            <h2>Never Miss Your Train Again</h2>
+            <p>Download Fastest Train now and get real-time departure information for your next journey. 
+            Completely free, no ads, no subscriptions.</p>
+            <a href="https://apps.apple.com/us/app/fastesttrain/id6754537947" class="btn btn-primary" style="background: linear-gradient(135deg, var(--train-blue) 0%, var(--primary) 100%); color: white;">
+                Download Free on App Store
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Apps -->
+    <section class="related-apps">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore More Apps</h2>
+                <p>Check out our other iOS applications</p>
+            </div>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-card-icon">⭕</div>
+                    <h3>Tic-Tac-More!</h3>
+                    <p>The classic tic tac toe game reimagined. Free, offline, and beautifully designed.</p>
+                    <a href="/tictacmore">Learn More</a>
+                </div>
+                <div class="app-card">
+                    <div class="app-card-icon">🐵</div>
+                    <h3>Lingotino</h3>
+                    <p>Learn Italian through fun games and challenges. Coming November 2025!</p>
+                    <a href="/lingotino">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tayloriellos</h3>
+                <p>Creating simple, joyful apps that make life brighter.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Apps</h3>
+                <ul class="footer-links">
+                    <li><a href="/fastesttrain">Fastest Train</a></li>
+                    <li><a href="/tictacmore">Tic-Tac-More!</a></li>
+                    <li><a href="/lingotino">Lingotino</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
