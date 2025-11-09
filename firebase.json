@@ -1,20 +1,11 @@
 {
   "hosting": {
-    "public": "public",
+    "public": ".",
     "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "/tictacmore",
-        "destination": "/tictacmore.html"
-      },
-      {
-        "source": "/fastesttrain",
-        "destination": "/fastesttrain.html"
-      },
-      {
-        "source": "/lingotino",
-        "destination": "/lingotino.html"
-      }
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ]
   }
 }
