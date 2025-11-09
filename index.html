@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tayloriellos Mobile Apps | Download Now</title>
+    <meta name="description" content="Discover simple, joyful iOS apps by Tayloriellos. Download Fastest Train for UK rail times, Tic-Tac-More! for classic gaming, and Lingotino for language learning.">
+    <meta name="keywords" content="iOS apps, mobile apps, UK train app, tic tac toe app, Italian learning app, free iPhone apps">
+    <meta name="author" content="Robert Taylor (Tayloriellos)">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Tayloriellos Mobile Apps - Small Apps. Big Smiles.">
+    <meta property="og:description" content="Simple, joyful iOS apps that make life brighter. Download now for free!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tayloriellos.com">
+    
+    <title>Tayloriellos Mobile Apps | Free iOS Apps for Daily Life</title>
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60c031cb-9c03-40f1-9044-ea4e0c00dae6" data-blockingmode="auto" type="text/javascript"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S1FFNJK5J7');
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -12,20 +32,111 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #667eea;
+            --primary-dark: #764ba2;
+            --dark: #2d3748;
+            --gray: #718096;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--dark);
             overflow-x: hidden;
         }
 
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 150px 20px 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
         }
 
         .hero::before {
@@ -47,22 +158,34 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3em;
+            font-size: 4em;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 800;
             animation: fadeInUp 0.8s ease;
+            letter-spacing: -1px;
         }
 
-        .hero p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
+        .hero .tagline {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
             opacity: 0.95;
             animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero .description {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         @keyframes fadeInUp {
@@ -76,235 +199,569 @@
             }
         }
 
-        .app-store-btn {
-            display: inline-block;
-            background: black;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
             animation: fadeInUp 0.8s ease 0.4s backwards;
         }
 
-        .app-store-btn:hover {
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--white);
+            padding: 60px 20px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        /* Apps Section */
+        .apps-section {
+            padding: 100px 20px;
+            background: var(--light-gray);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
 
-        .apps-section {
-            padding: 80px 20px;
-            background: #f8f9fa;
-        }
-
-        .apps-section h2 {
+        .section-header {
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 50px;
-            color: #2d3748;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .section-header p {
+            font-size: 1.3em;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            margin-top: 40px;
         }
 
         .app-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .app-card:hover::before {
+            transform: scaleX(1);
         }
 
         .app-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
 
         .app-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 18px;
-            margin-bottom: 20px;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 22px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
 
         .app-card h3 {
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 15px;
-            color: #2d3748;
+            color: var(--dark);
+            font-weight: 700;
         }
 
         .app-card p {
-            color: #718096;
+            color: var(--gray);
             margin-bottom: 25px;
             line-height: 1.8;
+            font-size: 1.05em;
         }
 
-        .features {
+        .app-features {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .features li {
-            padding: 8px 0;
+        .app-features li {
+            padding: 10px 0;
             color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .features li::before {
-            content: "✓ ";
-            color: #667eea;
+        .app-features li::before {
+            content: "✓";
+            color: var(--primary);
             font-weight: bold;
-            margin-right: 8px;
+            font-size: 1.2em;
+            background: rgba(102, 126, 234, 0.1);
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .app-screenshot {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .app-screenshot img {
+            max-width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .app-screenshot img:hover {
+            transform: scale(1.05);
         }
 
         .download-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
+            padding: 15px 35px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
         .download-btn:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
         }
 
-        .footer {
-            background: #2d3748;
+        .download-btn.coming-soon {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
+            padding: 100px 20px;
             text-align: center;
-            padding: 40px 20px;
         }
 
-        .footer a {
-            color: #667eea;
+        .cta-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .footer-section p {
+            color: #a0aec0;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
             text-decoration: none;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
             .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero .tagline {
+                font-size: 1.3em;
+            }
+
+            .hero .description {
+                font-size: 1em;
+            }
+
+            .section-header h2 {
                 font-size: 2em;
             }
-            
-            .hero p {
-                font-size: 1.1em;
-            }
-            
+
             .apps-grid {
                 grid-template-columns: 1fr;
             }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .stat-number {
+                font-size: 2.5em;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S1FFNJK5J7');
-</script>
 <body>
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Tayloriello Mobile Apps</h1>
-            <p>Small Apps. Big Smiles.</p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Tayloriellos</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="/tictacmore">Tic-Tac-More!</a></li>
+                <li><a href="/fastesttrain">Fastest Train</a></li>
+                <li><a href="/lingotino">Lingotino</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
 
-<p>We believe technology should make life brighter, not busier. 
-    Our mission is to craft simple, joyful apps that help you tackle life’s little challenges — 
-    the everyday moments that deserve a touch of ease and delight. Whether it’s streamlining your commute, 
-    sparking creativity, or simplifying daily tasks, our apps are designed to be lightweight, intuitive, 
-    and genuinely helpful. Because sometimes, the smallest tools can make the biggest difference.</p>
-            <a href="#apps" class="app-store-btn">Explore Apps</a>
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h1>Small Apps. Big Smiles.</h1>
+            <p class="tagline">Technology that makes life brighter, not busier</p>
+            <p class="description">
+                We craft simple, joyful iOS apps that help you tackle life's little challenges. 
+                Whether it's streamlining your commute, sparking creativity, or simplifying daily tasks, 
+                our apps are designed to be lightweight, intuitive, and genuinely helpful.
+            </p>
+            <div class="cta-buttons">
+                <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
+                <a href="https://forms.gle/zZ6RiiQVjieNy7en6" class="btn btn-secondary">Get in Touch</a>
+            </div>
         </div>
     </div>
 
+    <!-- Stats Section -->
+    <div class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">iOS Apps</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Free Forever</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3K+</div>
+                <div class="stat-label">UK Train Stations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1K+</div>
+                <div class="stat-label">Words to Learn</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apps Section -->
     <div class="apps-section" id="apps">
         <div class="container">
-            <h2>Our Apps</h2>
+            <div class="section-header">
+                <h2>Our Apps</h2>
+                <p>Discover our collection of thoughtfully designed iOS applications</p>
+            </div>
             <div class="apps-grid">
                 
+                <!-- Tic-Tac-More! -->
                 <div class="app-card">
-                    <div class="app-icon">🚄</div>
-                    <h3>Fastest Train</h3>
-                    <p>Looking for the next train home? Not sure what platform your train will leave from? 
-                        Our beautifully clean app will give you exactly the information you need without all the fuss. 
-                        Using data from UK National Rail network, you can view train departure and calling points for almost 3000 stations!
-</p>
-                    <ul class="features">
-                        <li>Real-time schedules</li>
-                        <li>Save favorite routes</li>
-                        <li>Devices supported: Apple iOS 26 (iPhone & iPad)</li>
-                        <li>Cost: Completely free!</li>
-                    </ul>
-                      <p align="center">
-                          <img width="250px" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/17/d9/3d17d9db-9db5-bb03-1a80-b5497998e3f1/Simulator_Screenshot_-_iPhone_17_-_2025-10-30_at_11.39.15.png/460x1022bb.webp"/>
-                          </p>
-                    <br/>
-                    <a href="https://apps.apple.com/us/app/fastesttrain/id6754537947" class="download-btn">Download on iOS App Store</a>
-                </div>
-
-                <div class="app-card">
+                    <span class="app-badge">🌟 FEATURED</span>
                     <div class="app-icon">⭕</div>
                     <h3>Tic-Tac-More!</h3>
-                    <p>The classic game reimagined - take the joy with you anywhere. Play solo or with friends!</p>
-                    <ul class="features">
-                        <li>Beautifully simple UI</li>
-                        <li>Offline mode</li>
-                        <li>Cost: Completely free!</li>
+                    <p>The timeless classic reimagined with a beautifully clean interface. Challenge friends or test your skills against AI in this addictively simple game that's perfect for quick breaks or long journeys.</p>
+                    <ul class="app-features">
+                        <li>Beautifully simple & intuitive UI</li>
+                        <li>Play offline anywhere, anytime</li>
+                        <li>Single player & multiplayer modes</li>
+                        <li>Completely free with no ads!</li>
                     </ul>
-                    <p align="center">
-                    <img width="250px" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/f5/2c/dff52c9a-4907-f7a4-590d-76716ea70e49/ss1.png/460x996bb.webp"/>
-                        </p>
-                    <br/>
-                    <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="download-btn">Download on iOS App Store</a>
+                    <div class="app-screenshot">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/f5/2c/dff52c9a-4907-f7a4-590d-76716ea70e49/ss1.png/460x996bb.webp" alt="Tic-Tac-More! Screenshot"/>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="download-btn">Download on App Store</a>
+                    <a href="/tictacmore" class="learn-more-btn">Learn More →</a>
                 </div>
 
+                <!-- Fastest Train -->
                 <div class="app-card">
-                    <div class="app-icon">🔜</div>
-                    <h3>Lingotino</h3>
-                    <p>Unlock the fun in language learning with Lingotino! Dive into interactive games and exciting challenges that make mastering vocabulary, verbs, and grammar a breeze. Whether you’re starting fresh or brushing up on your skills, Lingotino turns learning into an adventure.<br/><br/>Meet Tino the monkey, your playful mascot, who will guide and cheer you on every step of the way.<br/><br/>Make language learning fun, fast, and unforgettable—download Lingotino today and start your journey with Tino!</p>
-                    <ul class="features">
-                        <li>Over 1000 words to learn</li>
-                        <li>Currently supports Italian with other languages coming soon</li>
-                        <li>Offline learning you can take with you anywhere!</li>
-                        <li>Launching in November 2025</li>
-                        <li>Cost: Completely free!</li>
-                        
+                    <span class="app-badge">🚄 TRAVEL</span>
+                    <div class="app-icon">🚄</div>
+                    <h3>Fastest Train</h3>
+                    <p>Never miss your train again! Get real-time departure information and platform details for almost 3,000 UK stations. Clean, fast, and exactly what you need when you're rushing to catch a train.</p>
+                    <ul class="app-features">
+                        <li>Real-time UK National Rail data</li>
+                        <li>Platform finder for quick navigation</li>
+                        <li>Save your favorite routes</li>
+                        <li>Works on iPhone & iPad</li>
                     </ul>
-                    <a href="#" class="download-btn" style="opacity: 0.5; cursor: not-allowed;">Coming Soon</a>
+                    <div class="app-screenshot">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/17/d9/3d17d9db-9db5-bb03-1a80-b5497998e3f1/Simulator_Screenshot_-_iPhone_17_-_2025-10-30_at_11.39.15.png/460x1022bb.webp" alt="Fastest Train Screenshot"/>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/fastesttrain/id6754537947" class="download-btn">Download on App Store</a>
+                    <a href="/fastesttrain" class="learn-more-btn">Learn More →</a>
+                </div>
+
+                <!-- Lingotino -->
+                <div class="app-card">
+                    <span class="app-badge">🎓 COMING SOON</span>
+                    <div class="app-icon">🐵</div>
+                    <h3>Lingotino</h3>
+                    <p>Make language learning fun and unforgettable! Join Tino the monkey on an adventure through interactive games and exciting challenges. Master vocabulary, verbs, and grammar at your own pace.</p>
+                    <ul class="app-features">
+                        <li>Over 1,000 Italian words to master</li>
+                        <li>CEFR-aligned curriculum (A1-B2)</li>
+                        <li>Learn offline, anywhere you go</li>
+                        <li>More languages coming soon!</li>
+                    </ul>
+                    <div class="app-screenshot">
+                        <img src="data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='250' height='500' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='40' fill='white' text-anchor='middle' dominant-baseline='middle'%3ELaunching%0ANovember 2025%3C/text%3E%3C/svg%3E" alt="Lingotino Coming Soon"/>
+                    </div>
+                    <a href="#" class="download-btn coming-soon">Coming November 2025</a>
+                    <a href="/lingotino" class="learn-more-btn">Learn More →</a>
                 </div>
 
             </div>
         </div>
     </div>
 
-<div class="footer">
-        <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
-        <p style="margin-top: 10px;">
-            <a href="../">Home</a> | 
-            <a href="../privacy">Privacy</a> | 
-            <a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact</a>
-        </p>
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="container">
+            <h2>Ready to Download?</h2>
+            <p>Join thousands of users who have made their daily lives a little brighter with our apps. 
+            All our applications are completely free, with no ads or hidden costs.</p>
+            <div class="cta-buttons">
+                <a href="#apps" class="btn btn-primary">View All Apps</a>
+                <a href="https://forms.gle/zZ6RiiQVjieNy7en6" class="btn btn-secondary">Send Us Feedback</a>
+            </div>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tayloriellos</h3>
+                <p>Creating simple, joyful apps that make life brighter. Because sometimes, the smallest tools can make the biggest difference.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Apps</h3>
+                <ul class="footer-links">
+                    <li><a href="/tictacmore">Tic-Tac-More!</a></li>
+                    <li><a href="/fastesttrain">Fastest Train</a></li>
+                    <li><a href="/lingotino">Lingotino</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact Us</a></li>
+                    <li><a href="#apps">Download Apps</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
