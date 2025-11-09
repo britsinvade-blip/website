@@ -3,7 +3,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://tayloriellos.com/</loc>
+    <loc>/</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
   
   <!-- Tic-Tac-More! Product Page -->
   <url>
-    <loc>https://tayloriellos.com/tictacmore</loc>
+    <loc>/tictacmore</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
   
   <!-- Fastest Train Product Page -->
   <url>
-    <loc>https://tayloriellos.com/fastesttrain</loc>
+    <loc>/fastesttrain</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
   
   <!-- Lingotino Product Page -->
   <url>
-    <loc>https://tayloriellos.com/lingotino</loc>
+    <loc>/lingotino</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +35,7 @@
   
   <!-- Privacy Policy -->
   <url>
-    <loc>https://tayloriellos.com/privacy</loc>
+    <loc>/privacy</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
