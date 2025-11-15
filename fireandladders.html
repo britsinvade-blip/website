@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Download Fire & Ladders - A thrilling twist on the classic board game! Race to escape while avoiding fires. 2-6 players, AI mode, offline play. Free on iOS for ages 4+.">
+    <meta name="keywords" content="snakes and ladders app, board game iOS, Fire and Ladders, family board game app, kids game iOS, multiplayer board game, classic board game, offline board game, free board game app, snakes and ladders twist">
+    <meta name="author" content="Robert Taylor (Tayloriellos)">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Fire & Ladders - Classic Board Game Reimagined">
+    <meta property="og:description" content="Race to escape while avoiding fires! 2-6 players, AI mode, endless fun for the whole family. Free on iOS!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tayloriellos.com/fireandladders">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fire & Ladders - Board Game App">
+    <meta name="twitter:description" content="Classic game with a fiery twist! 2-6 players, AI mode. Free for iOS!">
+    
+    <title>Fire & Ladders | Classic Board Game App for iPhone & iPad - Free Download</title>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Fire & Ladders",
+      "operatingSystem": "iOS",
+      "applicationCategory": "GameApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "contentRating": "4+",
+      "description": "A thrilling twist on the classic Snakes & Ladders game. Race to escape while avoiding fires. 2-6 players with AI mode and offline play.",
+      "featureList": [
+        "2-6 player support",
+        "AI opponent mode",
+        "Offline play",
+        "Dynamic board generation",
+        "Family-friendly for ages 4+",
+        "Free with no ads"
+      ]
+    }
+    </script>
+    
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60c031cb-9c03-40f1-9044-ea4e0c00dae6" data-blockingmode="auto" type="text/javascript"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S1FFNJK5J7');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --primary-dark: #764ba2;
+            --fire-red: #dc2626;
+            --fire-orange: #ff6b35;
+            --fire-yellow: #fbbf24;
+            --ladder-brown: #92400e;
+            --dark: #2d3748;
+            --gray: #718096;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--fire-red) 0%, var(--fire-orange) 50%, var(--fire-yellow) 100%);
+            color: white;
+            padding: 150px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            background: var(--white);
+            border-radius: 27px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            animation: fadeInUp 0.8s ease 0.1s backwards;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .tagline {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero .badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--fire-red);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Screenshot Gallery */
+        .gallery-section {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            font-size: 1.2em;
+            color: var(--gray);
+        }
+
+        .screenshot-carousel {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar-track {
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar-thumb {
+            background: var(--fire-red);
+            border-radius: 10px;
+        }
+
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+        }
+
+        .screenshot-item img {
+            height: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* How to Play Section */
+        .how-to-play {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--fire-red) 0%, var(--fire-orange) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 800;
+        }
+
+        .step-content h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Game Rules */
+        .rules-section {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .rule-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .rule-emoji {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .rule-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .rule-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Perfect For Section */
+        .perfect-for {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .perfect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .perfect-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .perfect-emoji {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .perfect-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .perfect-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Download CTA Section */
+        .download-cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--fire-red) 0%, var(--fire-orange) 50%, var(--fire-yellow) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .download-cta h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .download-cta p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Related Apps */
+        .related-apps {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .app-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .app-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+        }
+
+        .app-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .app-card p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .app-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .app-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section p {
+            color: #a0aec0;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .section-header h2 {
+                font-size: 2em;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .screenshot-item img {
+                height: 400px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Tayloriellos</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#apps">All Apps</a></li>
+                <li><a href="/tictacmore">Tic-Tac-More!</a></li>
+                <li><a href="/fastesttrain">Fastest Train</a></li>
+                <li><a href="/lingotino">Lingotino</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="app-icon-large">🔥</div>
+            <h1>Fire & Ladders</h1>
+            <p class="tagline">A thrilling twist on the classic board game!</p>
+            <div class="badges">
+                <span class="badge">🎲 2-6 Players</span>
+                <span class="badge">🤖 AI Mode</span>
+                <span class="badge">📴 Offline Play</span>
+                <span class="badge">👨‍👩‍👧‍👦 Ages 4+</span>
+            </div>
+            <div class="download-buttons">
+                <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="btn btn-primary">
+                    Download on App Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>Race to the finish while avoiding fiery obstacles!</p>
+            </div>
+            <div class="screenshot-carousel">
+                <div class="screenshot-item">
+                    <img src="data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='250' height='500' fill='%23dc2626'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='30' fill='white' text-anchor='middle' dominant-baseline='middle'%3EGame Board%0AScreenshot%3C/text%3E%3C/svg%3E" alt="Fire & Ladders Game Board">
+                </div>
+                <div class="screenshot-item">
+                    <img src="data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='250' height='500' fill='%23ff6b35'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='30' fill='white' text-anchor='middle' dominant-baseline='middle'%3EPlayer Select%0AScreenshot%3C/text%3E%3C/svg%3E" alt="Fire & Ladders Player Selection">
+                </div>
+                <div class="screenshot-item">
+                    <img src="data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='250' height='500' fill='%23fbbf24'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='30' fill='white' text-anchor='middle' dominant-baseline='middle'%3EGameplay%0AScreenshot%3C/text%3E%3C/svg%3E" alt="Fire & Ladders Gameplay">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why You'll Love Fire & Ladders</h2>
+                <p>Classic fun with an exciting new challenge</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>2-6 Players</h3>
+                    <p>Perfect for the whole family! Play with 2 to 6 players and see who can escape the fires first.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Opponents</h3>
+                    <p>No friends around? Play against smart AI opponents that provide a real challenge!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Avoid the Fires</h3>
+                    <p>Instead of snakes, dodge dangerous fires! Land on one and slide down—can you reach the top?</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🪜</div>
+                    <h3>Climb the Ladders</h3>
+                    <p>Find ladders to skip ahead and gain the advantage. Strategy meets luck!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎲</div>
+                    <h3>Dynamic Boards</h3>
+                    <p>Every game is different! Boards change each time you play for endless replayability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📴</div>
+                    <h3>Play Offline</h3>
+                    <p>No internet needed! Perfect for road trips, flights, or anywhere you go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play -->
+    <section class="how-to-play">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Play</h2>
+                <p>Simple rules, endless fun</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Your Players</h3>
+                        <p>Select 2-6 players—friends, family, or AI opponents. Pick your colors and get ready to race!</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Roll the Dice</h3>
+                        <p>Take turns rolling the dice. Move your game piece forward by the number shown.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Climb Ladders, Avoid Fires</h3>
+                        <p>Land on a ladder to climb up fast! But watch out—land on a fire and you'll slide down!</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>First to the Top Wins!</h3>
+                        <p>Race to reach square 100 at the top of the board. First player there wins and escapes the fires!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Rules -->
+    <section class="rules-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Game Elements</h2>
+                <p>What makes Fire & Ladders exciting</p>
+            </div>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-emoji">🔥</div>
+                    <h3>The Fires</h3>
+                    <p>Land on a fire square and you'll slide down! These dangerous obstacles replace the traditional snakes and add extra excitement.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-emoji">🪜</div>
+                    <h3>The Ladders</h3>
+                    <p>Ladders are your best friend! Land at the bottom of one to climb up and get ahead of your opponents.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-emoji">🎲</div>
+                    <h3>The Dice</h3>
+                    <p>A simple dice roll determines your move. Will luck be on your side, or will you land on a fire?</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-emoji">🏆</div>
+                    <h3>The Goal</h3>
+                    <p>Be the first to reach square 100 at the top! Navigate carefully, use strategy, and may the best player win!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For -->
+    <section class="perfect-for">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect For Everyone</h2>
+                <p>Fun for all ages and occasions</p>
+            </div>
+            <div class="perfect-grid">
+                <div class="perfect-card">
+                    <div class="perfect-emoji">👨‍👩‍👧‍👦</div>
+                    <h3>Family Game Night</h3>
+                    <p>Bring the family together for classic board game fun with a modern twist.</p>
+                </div>
+                <div class="perfect-card">
+                    <div class="perfect-emoji">🎉</div>
+                    <h3>Parties & Gatherings</h3>
+                    <p>Perfect party game for up to 6 players. Everyone can join the fun!</p>
+                </div>
+                <div class="perfect-card">
+                    <div class="perfect-emoji">🧒</div>
+                    <h3>Kids (Ages 4+)</h3>
+                    <p>Simple rules make it perfect for young children to learn and enjoy.</p>
+                </div>
+                <div class="perfect-card">
+                    <div class="perfect-emoji">✈️</div>
+                    <h3>Travel & Road Trips</h3>
+                    <p>Offline play means you can enjoy it anywhere—planes, cars, or waiting rooms!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="download-cta">
+        <div class="container">
+            <h2>Ready to Race?</h2>
+            <p>Download Fire & Ladders now and start your adventure! Climb the ladders, avoid the fires, and race to victory. Completely free with no ads!</p>
+            <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="btn btn-primary">
+                Download Free on App Store
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Apps -->
+    <section class="related-apps">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore More Apps</h2>
+                <p>Check out our other iOS applications</p>
+            </div>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-card-icon">⭕</div>
+                    <h3>Tic-Tac-More!</h3>
+                    <p>The classic tic tac toe game reimagined. Free, offline, and beautifully designed.</p>
+                    <a href="/tictacmore">Learn More</a>
+                </div>
+                <div class="app-card">
+                    <div class="app-card-icon">🚄</div>
+                    <h3>Fastest Train</h3>
+                    <p>Real-time UK train departures for 3,000+ stations. Never miss your train!</p>
+                    <a href="/fastesttrain">Learn More</a>
+                </div>
+                <div class="app-card">
+                    <div class="app-card-icon">🐵</div>
+                    <h3>Lingotino</h3>
+                    <p>Learn Italian through fun games and challenges. Coming November 2025!</p>
+                    <a href="/lingotino">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tayloriellos</h3>
+                <p>Creating simple, joyful apps that make life brighter.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Apps</h3>
+                <ul class="footer-links">
+                    <li><a href="/fireandladders">Fire & Ladders</a></li>
+                    <li><a href="/tictacmore">Tic-Tac-More!</a></li>
+                    <li><a href="/fastesttrain">Fastest Train</a></li>
+                    <li><a href="/lingotino">Lingotino</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
