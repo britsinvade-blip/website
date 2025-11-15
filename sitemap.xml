@@ -3,40 +3,48 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://www.tayloriellos.co.uk/</loc>
-    <lastmod>2025-11-09</lastmod>
+    <loc>https://tayloriellos.com/</loc>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
+  <!-- Fire & Ladders Product Page -->
+  <url>
+    <loc>https://tayloriellos.com/fireandladders</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
   <!-- Tic-Tac-More! Product Page -->
   <url>
-    <loc>https://www.tayloriellos.co.uk/tictacmore</loc>
-    <lastmod>2025-11-09</lastmod>
+    <loc>https://tayloriellos.com/tictacmore</loc>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Fastest Train Product Page -->
   <url>
-    <loc>https://www.tayloriellos.co.uk/fastesttrain</loc>
-    <lastmod>2025-11-09</lastmod>
+    <loc>https://tayloriellos.com/fastesttrain</loc>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Lingotino Product Page -->
   <url>
-    <loc>https://www.tayloriellos.co.uk/lingotino</loc>
-    <lastmod>2025-11-09</lastmod>
+    <loc>https://tayloriellos.com/lingotino</loc>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Privacy Policy -->
   <url>
-    <loc>https://www.tayloriellos.co.uk/privacy</loc>
-    <lastmod>2025-11-09</lastmod>
+    <loc>https://tayloriellos.com/privacy</loc>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
