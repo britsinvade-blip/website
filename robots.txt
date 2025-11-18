@@ -1,6 +1,9 @@
 # Robots.txt for Tayloriellos Mobile Apps
 # Allow all search engines to crawl the site
 
+User-agent: Google-adstxt
+Disallow:
+
 User-agent: *
 Allow: /
 
