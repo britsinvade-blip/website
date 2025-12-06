@@ -3,54 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Learn Italian with Lingotino! Fun language learning app with 1,000+ words, CEFR-aligned curriculum (A1-B2), interactive games, and Tino the monkey. Free iOS app launching December 2025.">
     <meta name="keywords" content="Italian learning app, learn Italian iOS, Italian vocabulary app, Italian verb conjugation app, offline Italian learning, Italian language games, fun Italian learning app, Italian vocabulary games, CEFR Italian app, learn Italian free, Italian for beginners">
     <meta name="author" content="Robert Taylor (Tayloriellos)">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph for Social Sharing -->
-    <meta property="og:title" content="Lingotino - Learn Italian Through Fun & Games">
-    <meta property="og:description" content="Master Italian vocabulary and grammar with interactive games. 1,000+ words, CEFR-aligned curriculum. Coming December 2025!">
+    <meta property="og:title" content="Lingotino - Learn Italian with Fun">
+    <meta property="og:description" content="Master Italian vocabulary, verbs, and grammar through interactive games. 1,000+ words, CEFR-aligned. Coming December 2025!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tayloriellos.com/lingotino">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lingotino - Learn Italian App">
-    <meta name="twitter:description" content="Fun Italian learning with Tino the monkey! Coming December 2025.">
-    
-    <title>Lingotino | Learn Italian - Free Language Learning App for iOS (Coming Soon)</title>
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "Lingotino",
-      "operatingSystem": "iOS",
-      "applicationCategory": "EducationalApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/PreOrder"
-      },
-      "description": "Learn Italian through interactive games and challenges. Over 1,000 words, CEFR-aligned curriculum from A1 to B2, offline learning with Tino the monkey as your guide.",
-      "featureList": [
-        "1,000+ Italian words and phrases",
-        "CEFR-aligned curriculum (A1-B2)",
-        "Interactive games and challenges",
-        "Verb conjugation practice",
-        "Offline learning",
-        "Tino the monkey mascot"
-      ]
-    }
-    </script>
-    
+
+    <title>Lingotino | Learn Italian App for iPhone & iPad - Coming December 2025</title>
+
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60c031cb-9c03-40f1-9044-ea4e0c00dae6" data-blockingmode="auto" type="text/javascript"></script>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
     <script>
@@ -59,873 +28,236 @@
       gtag('js', new Date());
       gtag('config', 'G-S1FFNJK5J7');
     </script>
-    
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #667eea;
-            --primary-dark: #764ba2;
-            --accent: #48bb78;
-            --italian-green: #009246;
-            --italian-red: #ce2b37;
-            --warm-orange: #ff6b35;
-            --sunny-yellow: #f7b801;
-            --dark: #2d3748;
-            --gray: #718096;
-            --light-gray: #f8f9fa;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            font-size: 1.5em;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--warm-orange) 0%, var(--sunny-yellow) 100%);
-            color: white;
-            padding: 150px 20px 100px;
+        .app-hero {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #2D9A52 100%);
+            color: var(--white);
+            padding: calc(64px + var(--spacing-xxl)) var(--spacing-md) var(--spacing-xxl);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
+        .app-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.15"/></svg>');
-            animation: float 20s linear infinite;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
-        @keyframes float {
-            from { transform: translateY(0); }
-            to { transform: translateY(-100px); }
-        }
-
-        .hero-content {
+        .app-hero-content {
             position: relative;
             z-index: 1;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
         .app-icon-large {
-            width: 120px;
-            height: 120px;
-            background: var(--white);
-            border-radius: 27px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: fadeInUp 0.8s ease;
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            margin: 0 auto var(--spacing-md);
+            box-shadow: var(--shadow-xl);
+            object-fit: cover;
         }
 
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            font-weight: 800;
-            animation: fadeInUp 0.8s ease 0.1s backwards;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        .app-hero h1 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
         }
 
-        .hero .tagline {
-            font-size: 1.6em;
-            margin-bottom: 30px;
+        .app-hero .tagline {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
             opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
         }
 
-        .hero .badges {
+        .app-badges {
             display: flex;
-            gap: 15px;
+            gap: var(--spacing-sm);
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 40px;
-            animation: fadeInUp 0.8s ease 0.3s backwards;
+            margin-bottom: var(--spacing-lg);
         }
 
         .badge {
-            background: rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.2);
             padding: 8px 20px;
-            border-radius: 20px;
+            border-radius: 980px;
             font-weight: 600;
+            font-size: 0.9375rem;
             backdrop-filter: blur(10px);
         }
 
-        .coming-soon-badge {
-            background: var(--white);
-            color: var(--warm-orange);
-            font-size: 1.2em;
-            padding: 12px 30px;
-            font-weight: 700;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .launch-info {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            margin-top: 40px;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-
-        .launch-info h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .launch-info p {
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
-
-        /* Mascot Section */
-        .mascot-section {
-            background: var(--white);
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .mascot-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .mascot-emoji {
-            font-size: 8em;
-            margin-bottom: 30px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .mascot-content h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .mascot-content p {
-            font-size: 1.3em;
-            color: var(--gray);
-            line-height: 1.8;
-        }
-
-        /* Stats Section */
-        .stats-section {
-            background: var(--light-gray);
-            padding: 80px 20px;
-        }
-
-        .stats-grid {
+        .feature-card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .stat-item {
-            padding: 20px;
-        }
-
-        .stat-number {
-            font-size: 3em;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--warm-orange) 0%, var(--sunny-yellow) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: var(--gray);
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 100px 20px;
-            background: var(--white);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 3em;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .section-header p {
-            font-size: 1.2em;
-            color: var(--gray);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
         }
 
         .feature-card {
-            background: var(--light-gray);
-            padding: 40px;
-            border-radius: 20px;
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-base);
+            border: 1px solid var(--border-color);
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
         }
 
         .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
         }
 
         .feature-card h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
         }
 
         .feature-card p {
-            color: var(--gray);
-            line-height: 1.8;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
-        /* CEFR Levels Section */
-        .cefr-section {
-            padding: 100px 20px;
-            background: var(--light-gray);
-        }
-
-        .cefr-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .cefr-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--warm-orange);
-        }
-
-        .cefr-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .cefr-level {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--warm-orange) 0%, var(--sunny-yellow) 100%);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .cefr-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .cefr-card p {
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .cefr-card ul {
-            list-style: none;
-            text-align: left;
-        }
-
-        .cefr-card li {
-            padding: 8px 0;
-            color: var(--gray);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .cefr-card li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        /* Learning Features */
-        .learning-section {
-            padding: 100px 20px;
-            background: var(--white);
-        }
-
-        .learning-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            margin-top: 60px;
-            align-items: center;
-        }
-
-        .learning-feature {
-            display: flex;
-            gap: 30px;
-            align-items: start;
-        }
-
-        .learning-icon {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--warm-orange) 0%, var(--sunny-yellow) 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-        }
-
-        .learning-content h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .learning-content p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
-
-        /* Coming Soon CTA */
-        .coming-soon-cta {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, var(--warm-orange) 0%, var(--sunny-yellow) 100%);
-            color: white;
+        .coming-soon-banner {
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: var(--spacing-md);
             text-align: center;
-        }
-
-        .coming-soon-cta h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .coming-soon-cta p {
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .launch-date {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 1.5em;
-            font-weight: 700;
-        }
-
-        /* Related Apps */
-        .related-apps {
-            padding: 100px 20px;
-            background: var(--white);
-        }
-
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .app-card {
-            background: var(--light-gray);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .app-card-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 18px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-        }
-
-        .app-card h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-        }
-
-        .app-card p {
-            color: var(--gray);
-            margin-bottom: 25px;
-        }
-
-        .app-card a {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            font-size: 1.125rem;
         }
 
-        .app-card a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 20px 30px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 20px;
-        }
-
-        .footer-section p {
-            color: #a0aec0;
-            line-height: 1.8;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #a0aec0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .footer-bottom {
+        .download-cta {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #2D9A52 100%);
+            color: var(--white);
+            padding: var(--spacing-xxl) var(--spacing-md);
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #4a5568;
-            color: #a0aec0;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .section-header h2 {
-                font-size: 2em;
-            }
-
-            .mascot-emoji {
-                font-size: 5em;
-            }
-
-            .stat-number {
-                font-size: 2.5em;
-            }
-
-            .learning-feature {
-                flex-direction: column;
-                text-align: center;
-            }
+        .download-cta h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
         }
 
-        html {
-            scroll-behavior: smooth;
+        .download-cta p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .download-cta .btn-primary {
+            background: var(--white);
+            color: var(--accent-green);
+            opacity: 0.7;
+            cursor: not-allowed;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">Tayloriellos</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/#apps">All Apps</a></li>
-                <li><a href="/fireandladders">Fire & Ladders</a></li>
-                <li><a href="/tictacmore">Tic-Tac-More!</a></li>
-                <li><a href="/fastesttrain">Fastest Train</a></li>
                 <li><a href="/privacy">Privacy</a></li>
                 <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
         </div>
     </nav>
 
+    <!-- Coming Soon Banner -->
+    <div class="coming-soon-banner">
+        Coming December 2025
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="app-icon-large">🐵</div>
+    <section class="app-hero">
+        <div class="app-hero-content">
+            <img src="data:image/svg+xml,%3Csvg width='192' height='192' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='192' height='192' rx='44' fill='%2334C759'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='96' text-anchor='middle' dominant-baseline='middle'%3E🐵%3C/text%3E%3C/svg%3E"
+                 alt="Lingotino App Icon"
+                 class="app-icon-large"
+                 loading="eager">
             <h1>Lingotino</h1>
-            <p class="tagline">Learn Italian through fun games and adventures with Tino!</p>
-            <div class="badges">
-                <span class="badge coming-soon-badge">🎉 LAUNCHING DECEMBER 2025</span>
-            </div>
-            <div class="badges">
-                <span class="badge">📚 1,000+ Words</span>
-                <span class="badge">🎮 Interactive Games</span>
-                <span class="badge">📴 Offline Learning</span>
-                <span class="badge">💯 100% Free</span>
-            </div>
-            <div class="launch-info">
-                <h3>🗓️ Mark Your Calendar!</h3>
-                <p>Lingotino launches in <strong>December 2025</strong>. Start your Italian learning journey with Tino the monkey as your playful guide!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mascot Section -->
-    <section class="mascot-section">
-        <div class="container">
-            <div class="mascot-content">
-                <div class="mascot-emoji">🐵</div>
-                <h2>Meet Tino the Monkey!</h2>
-                <p>Tino isn't just a mascot—he's your cheerful companion on your Italian learning adventure! This playful monkey will guide you through lessons, celebrate your victories, and keep you motivated every step of the way. With Tino by your side, learning Italian becomes an exciting journey rather than a chore.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">1,000+</div>
-                <div class="stat-label">Italian Words & Phrases</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">300+</div>
-                <div class="stat-label">Verb Conjugations</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">A1-B2</div>
-                <div class="stat-label">CEFR Levels</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Offline & Free</div>
+            <p class="tagline">Learn Italian with Fun!</p>
+            <div class="app-badges">
+                <span class="badge">1,000+ Words</span>
+                <span class="badge">CEFR A1-B2</span>
+                <span class="badge">Interactive Games</span>
+                <span class="badge">Offline Learning</span>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="section section-light">
         <div class="container">
             <div class="section-header">
-                <h2>Why You'll Love Lingotino</h2>
-                <p>Language learning designed to be fun, effective, and accessible</p>
+                <h2>Language Learning Reimagined</h2>
+                <p>Master Italian through engaging games and challenges</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>Interactive Games</h3>
-                    <p>Learn through engaging games and challenges that make vocabulary stick. No boring flashcards—just pure fun!</p>
-                </div>
+            <div class="feature-card-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📚</div>
-                    <h3>Comprehensive Curriculum</h3>
-                    <p>CEFR-aligned lessons from beginner (A1) to upper intermediate (B2). Structured learning that works.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🗣️</div>
-                    <h3>Verb Mastery</h3>
-                    <p>Master Italian verb conjugations with over 300 verbs across all tenses. Practice makes perfect!</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📴</div>
-                    <h3>Learn Anywhere</h3>
-                    <p>Full offline support means you can learn on the train, plane, or anywhere without internet.</p>
+                    <h3>1,000+ Italian Words</h3>
+                    <p>Comprehensive vocabulary covering everyday topics, travel, food, culture, and more.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3>Track Progress</h3>
-                    <p>Monitor your improvement with detailed progress tracking. See how far you've come!</p>
+                    <h3>CEFR-Aligned Curriculum</h3>
+                    <p>Structured learning path from beginner (A1) to upper intermediate (B2) levels.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Interactive Games</h3>
+                    <p>Learn through fun, engaging games and challenges that make studying enjoyable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Verb Conjugations</h3>
+                    <p>Master Italian verb tenses with interactive conjugation practice and quizzes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📴</div>
+                    <h3>Learn Offline</h3>
+                    <p>All content available offline. Learn anywhere, anytime without internet connection.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3>More Languages Soon</h3>
-                    <p>Starting with Italian, but Spanish, French, and German are on the way!</p>
+                    <p>Starting with Italian, with more languages planned for future releases.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CEFR Levels Section -->
-    <section class="cefr-section">
+    <!-- CTA Section -->
+    <section class="download-cta">
         <div class="container">
-            <div class="section-header">
-                <h2>Learn at Your Level</h2>
-                <p>CEFR-aligned curriculum that grows with you</p>
-            </div>
-            <div class="cefr-grid">
-                <div class="cefr-card">
-                    <span class="cefr-level">A1</span>
-                    <h3>Beginner</h3>
-                    <p>Perfect for absolute beginners. Start with the basics:</p>
-                    <ul>
-                        <li>Greetings & introductions</li>
-                        <li>Numbers & colors</li>
-                        <li>Basic vocabulary (200+ words)</li>
-                        <li>Present tense verbs</li>
-                    </ul>
-                </div>
-                <div class="cefr-card">
-                    <span class="cefr-level">A2</span>
-                    <h3>Elementary</h3>
-                    <p>Build on your foundation:</p>
-                    <ul>
-                        <li>Daily routines & activities</li>
-                        <li>Food & shopping</li>
-                        <li>Expanded vocabulary (400+ words)</li>
-                        <li>Past & future tenses</li>
-                    </ul>
-                </div>
-                <div class="cefr-card">
-                    <span class="cefr-level">B1</span>
-                    <h3>Intermediate</h3>
-                    <p>Express yourself with confidence:</p>
-                    <ul>
-                        <li>Travel & directions</li>
-                        <li>Opinions & preferences</li>
-                        <li>Rich vocabulary (600+ words)</li>
-                        <li>Conditional & subjunctive</li>
-                    </ul>
-                </div>
-                <div class="cefr-card">
-                    <span class="cefr-level">B2</span>
-                    <h3>Upper Intermediate</h3>
-                    <p>Master complex communication:</p>
-                    <ul>
-                        <li>Abstract concepts</li>
-                        <li>Detailed descriptions</li>
-                        <li>Advanced vocabulary (1,000+ words)</li>
-                        <li>All verb tenses & moods</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Learning Features -->
-    <section class="learning-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>How Lingotino Helps You Learn</h2>
-                <p>Smart features designed for effective language acquisition</p>
-            </div>
-            <div class="learning-grid">
-                <div class="learning-feature">
-                    <div class="learning-icon">🎯</div>
-                    <div class="learning-content">
-                        <h3>Spaced Repetition</h3>
-                        <p>Our smart algorithm shows you words at the perfect time to maximize retention. Learn more efficiently!</p>
-                    </div>
-                </div>
-                <div class="learning-feature">
-                    <div class="learning-icon">🎲</div>
-                    <div class="learning-content">
-                        <h3>Gamified Learning</h3>
-                        <p>Earn points, unlock achievements, and compete with yourself. Learning feels like playing!</p>
-                    </div>
-                </div>
-                <div class="learning-feature">
-                    <div class="learning-icon">💡</div>
-                    <div class="learning-content">
-                        <h3>Context-Based Learning</h3>
-                        <p>See words used in real sentences and situations. Understand not just what words mean, but how to use them.</p>
-                    </div>
-                </div>
-                <div class="learning-feature">
-                    <div class="learning-icon">🔄</div>
-                    <div class="learning-content">
-                        <h3>Multiple Practice Modes</h3>
-                        <p>Flashcards, matching games, fill-in-the-blanks, and more. Variety keeps learning fresh and engaging.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coming Soon CTA -->
-    <section class="coming-soon-cta">
-        <div class="container">
-            <h2>Get Ready for Launch!</h2>
-            <p>Lingotino is launching in December 2025. Join Tino the monkey on an unforgettable Italian learning adventure. Master vocabulary, conquer verb conjugations, and have fun every step of the way!</p>
-            <div class="launch-date">
-                🗓️ Launching December 2025
-            </div>
-            <p style="margin-top: 30px; font-size: 1.1em;">Stay tuned for updates on our homepage and social media!</p>
-        </div>
-    </section>
-
-    <!-- Related Apps -->
-    <section class="related-apps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Try Our Other Apps</h2>
-                <p>Available now on the App Store</p>
-            </div>
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-card-icon">🔥</div>
-                    <h3>Fire & Ladders</h3>
-                    <p>A thrilling twist on the classic board game. Race to escape while avoiding fires! 2-6 players with AI mode.</p>
-                    <a href="/fireandladders">Download Now</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-card-icon">⭕</div>
-                    <h3>Tic-Tac-More!</h3>
-                    <p>The classic tic tac toe game reimagined. Free, offline, and beautifully designed.</p>
-                    <a href="/tictacmore">Download Now</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-card-icon">🚄</div>
-                    <h3>Fastest Train</h3>
-                    <p>Real-time UK train departures for 3,000+ stations. Never miss your train again!</p>
-                    <a href="/fastesttrain">Download Now</a>
-                </div>
-            </div>
+            <h2>Join the Waiting List</h2>
+            <p>Be the first to know when Lingotino launches. Sign up below to receive updates and early access!</p>
+            <a href="https://forms.gle/zZ6RiiQVjieNy7en6" class="btn btn-secondary btn-large">
+                Get Notified
+            </a>
         </div>
     </section>
 
@@ -934,19 +266,19 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Tayloriellos</h3>
-                <p>Creating simple, joyful apps that make life brighter.</p>
+                <p>Creating professional, thoughtfully designed apps that solve real problems. Because great software should be accessible to everyone.</p>
             </div>
             <div class="footer-section">
                 <h3>Our Apps</h3>
                 <ul class="footer-links">
-                    <li><a href="/lingotino">Lingotino (Coming Soon)</a></li>
                     <li><a href="/fireandladders">Fire & Ladders</a></li>
                     <li><a href="/tictacmore">Tic-Tac-More!</a></li>
                     <li><a href="/fastesttrain">Fastest Train</a></li>
+                    <li><a href="/lingotino">Lingotino</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Company</h3>
+                <h3>Resources</h3>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/privacy">Privacy Policy</a></li>
@@ -958,5 +290,17 @@
             <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

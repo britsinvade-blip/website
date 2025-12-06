@@ -3,51 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Download Tic-Tac-More! - The best free tic tac toe app for iOS. Play offline with friends or solo. Clean interface, no ads. Perfect for iPhone and iPad.">
-    <meta name="keywords" content="tic tac toe app iOS, noughts and crosses app, tic tac toe game iPhone, best free tic tac toe, offline tic tac toe, simple tic tac toe game, classic tic tac toe app, tic tac toe no ads">
+    <meta name="description" content="Download Tic-Tac-More! - The classic game reimagined. Clean interface, offline play, challenging AI. Completely free with no ads. For iPhone & iPad.">
+    <meta name="keywords" content="tic tac toe app, noughts and crosses app, classic games iOS, free games iPhone, offline games, family games, tic tac toe AI">
     <meta name="author" content="Robert Taylor (Tayloriellos)">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph for Social Sharing -->
-    <meta property="og:title" content="Tic-Tac-More! - Classic Tic Tac Toe Game for iOS">
-    <meta property="og:description" content="The timeless classic reimagined. Free, offline, no ads. Download now on the App Store!">
+    <meta property="og:title" content="Tic-Tac-More! - Classic Fun Without the Fuss">
+    <meta property="og:description" content="The timeless classic reimagined. Free, offline, and beautifully designed for iOS!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tayloriellos.com/tictacmore">
-    <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/f5/2c/dff52c9a-4907-f7a4-590d-76716ea70e49/ss1.png/460x996bb.webp">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tic-Tac-More! - Classic Tic Tac Toe for iOS">
-    <meta name="twitter:description" content="Free, offline tic tac toe game with beautiful design. No ads!">
-    
-    <title>Tic-Tac-More! | Best Free Tic Tac Toe App for iPhone & iPad</title>
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "Tic-Tac-More!",
-      "operatingSystem": "iOS",
-      "applicationCategory": "GameApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "1"
-      },
-      "description": "The classic tic tac toe game reimagined with a beautifully clean interface. Free, offline, no ads."
-    }
-    </script>
-    
+
+    <title>Tic-Tac-More! | Classic Tic Tac Toe Game for iPhone & iPad - Free Download</title>
+
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60c031cb-9c03-40f1-9044-ea4e0c00dae6" data-blockingmode="auto" type="text/javascript"></script>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
     <script>
@@ -56,244 +28,133 @@
       gtag('js', new Date());
       gtag('config', 'G-S1FFNJK5J7');
     </script>
-    
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #667eea;
-            --primary-dark: #764ba2;
-            --dark: #2d3748;
-            --gray: #718096;
-            --light-gray: #f8f9fa;
-            --white: #ffffff;
-            --accent: #48bb78;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            font-size: 1.5em;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 150px 20px 100px;
+        .app-hero {
+            background: linear-gradient(135deg, var(--accent-purple) 0%, #8B5CF6 100%);
+            color: var(--white);
+            padding: calc(64px + var(--spacing-xxl)) var(--spacing-md) var(--spacing-xxl);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
+        .app-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
-            animation: float 20s linear infinite;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
-        @keyframes float {
-            from { transform: translateY(0); }
-            to { transform: translateY(-100px); }
-        }
-
-        .hero-content {
+        .app-hero-content {
             position: relative;
             z-index: 1;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
         .app-icon-large {
-            width: 120px;
-            height: 120px;
-            background: var(--white);
-            border-radius: 27px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: fadeInUp 0.8s ease;
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            margin: 0 auto var(--spacing-md);
+            box-shadow: var(--shadow-xl);
+            object-fit: cover;
         }
 
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            font-weight: 800;
-            animation: fadeInUp 0.8s ease 0.1s backwards;
+        .app-hero h1 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
         }
 
-        .hero .tagline {
-            font-size: 1.6em;
-            margin-bottom: 30px;
+        .app-hero .tagline {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
             opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
         }
 
-        .hero .badges {
+        .app-badges {
             display: flex;
-            gap: 15px;
+            gap: var(--spacing-sm);
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 40px;
-            animation: fadeInUp 0.8s ease 0.3s backwards;
+            margin-bottom: var(--spacing-lg);
         }
 
         .badge {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             padding: 8px 20px;
-            border-radius: 20px;
+            border-radius: 980px;
             font-weight: 600;
+            font-size: 0.9375rem;
             backdrop-filter: blur(10px);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .feature-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
         }
 
-        .download-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 18px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 1.1em;
-        }
-
-        .btn-primary {
+        .feature-card {
             background: var(--white);
-            color: var(--primary);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        /* Screenshot Gallery */
-        .gallery-section {
-            padding: 100px 20px;
-            background: var(--white);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
             text-align: center;
-            margin-bottom: 60px;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-base);
+            border: 1px solid var(--border-color);
         }
 
-        .section-header h2 {
-            font-size: 3em;
-            margin-bottom: 15px;
-            font-weight: 800;
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .section-header p {
-            font-size: 1.2em;
-            color: var(--gray);
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
         }
 
-        .screenshot-carousel {
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .screenshot-gallery {
             display: flex;
-            gap: 30px;
+            gap: var(--spacing-md);
             overflow-x: auto;
-            padding: 20px;
+            padding: var(--spacing-md) 0;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
         }
 
-        .screenshot-carousel::-webkit-scrollbar {
+        .screenshot-gallery::-webkit-scrollbar {
             height: 8px;
         }
 
-        .screenshot-carousel::-webkit-scrollbar-track {
+        .screenshot-gallery::-webkit-scrollbar-track {
             background: var(--light-gray);
             border-radius: 10px;
         }
 
-        .screenshot-carousel::-webkit-scrollbar-thumb {
-            background: var(--primary);
+        .screenshot-gallery::-webkit-scrollbar-thumb {
+            background: var(--primary-blue);
             border-radius: 10px;
         }
 
@@ -304,462 +165,136 @@
 
         .screenshot-item img {
             height: 500px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-base);
         }
 
         .screenshot-item img:hover {
             transform: scale(1.05);
         }
 
-        /* Features Section */
-        .features-section {
-            padding: 100px 20px;
-            background: var(--light-gray);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .feature-card p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
-
-        /* How to Play Section */
-        .how-to-play {
-            padding: 100px 20px;
-            background: var(--white);
-        }
-
-        .steps-container {
-            max-width: 800px;
-            margin: 60px auto 0;
-        }
-
-        .step {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 50px;
-            align-items: center;
-        }
-
-        .step-number {
-            flex-shrink: 0;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-            font-weight: 800;
-        }
-
-        .step-content h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .step-content p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
-
-        /* Reviews Section */
-        .reviews-section {
-            padding: 100px 20px;
-            background: var(--light-gray);
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .review-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .stars {
-            color: #fbbf24;
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
-
-        .review-text {
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .reviewer {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        /* Download CTA Section */
         .download-cta {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, #8B5CF6 100%);
+            color: var(--white);
+            padding: var(--spacing-xxl) var(--spacing-md);
             text-align: center;
         }
 
         .download-cta h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-weight: 800;
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
         }
 
         .download-cta p {
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            opacity: 0.95;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--spacing-lg);
         }
 
-        /* Related Apps */
-        .related-apps {
-            padding: 100px 20px;
+        .download-cta .btn-primary {
             background: var(--white);
+            color: var(--accent-purple);
         }
 
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .app-card {
+        .download-cta .btn-primary:hover {
             background: var(--light-gray);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .app-card-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 18px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-        }
-
-        .app-card h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-        }
-
-        .app-card p {
-            color: var(--gray);
-            margin-bottom: 25px;
-        }
-
-        .app-card a {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .app-card a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 20px 30px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 20px;
-        }
-
-        .footer-section p {
-            color: #a0aec0;
-            line-height: 1.8;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #a0aec0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #4a5568;
-            color: #a0aec0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .section-header h2 {
-                font-size: 2em;
-            }
-
-            .step {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .screenshot-item img {
-                height: 400px;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">Tayloriellos</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/#apps">All Apps</a></li>
-                <li><a href="/fireandladders">Fire & Ladders</a></li>
-                <li><a href="/fastesttrain">Fastest Train</a></li>
-                <li><a href="/lingotino">Lingotino</a></li>
                 <li><a href="/privacy">Privacy</a></li>
                 <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="app-icon-large">⭕</div>
+    <section class="app-hero">
+        <div class="app-hero-content">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/16/56/af165610-f11c-6482-d332-634a6dfd4d4f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/1200x630wa.png"
+                 alt="Tic-Tac-More! App Icon"
+                 class="app-icon-large"
+                 loading="eager">
             <h1>Tic-Tac-More!</h1>
-            <p class="tagline">The timeless classic, beautifully reimagined for iOS</p>
-            <div class="badges">
-                <span class="badge">✨ Free Forever</span>
-                <span class="badge">📱 Offline Play</span>
-                <span class="badge">🎮 No Ads</span>
-                <span class="badge">⭐ 5-Star Rated</span>
+            <p class="tagline">Classic fun without the fuss!</p>
+            <div class="app-badges">
+                <span class="badge">Multiplayer</span>
+                <span class="badge">Enhanced AI</span>
+                <span class="badge">Offline Play</span>
+                <span class="badge">No Ads</span>
             </div>
-            <div class="download-buttons">
-                <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="btn btn-primary">
-                    Download on App Store
+            <div class="cta-buttons">
+                <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="btn btn-primary btn-large">
+                    Download Free on App Store
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Screenshot Gallery -->
-    <section class="gallery-section">
+    <!-- Screenshots Section -->
+    <section class="section section-white">
         <div class="container">
             <div class="section-header">
-                <h2>See It In Action</h2>
-                <p>Experience the clean, intuitive interface</p>
+                <h2>Simple. Beautiful. Fun.</h2>
+                <p>Experience the classic game you love with a modern twist</p>
             </div>
-            <div class="screenshot-carousel">
-                <div class="screenshot-item">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/f5/2c/dff52c9a-4907-f7a4-590d-76716ea70e49/ss1.png/460x996bb.webp" alt="Tic-Tac-More! Main Game Screen">
-                </div>
+            <div class="screenshot-gallery">
                 <div class="screenshot-item">
                     <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/f5/2c/dff52c9a-4907-f7a4-590d-76716ea70e49/ss1.png/460x996bb.webp" alt="Tic-Tac-More! Gameplay">
                 </div>
                 <div class="screenshot-item">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/f5/2c/dff52c9a-4907-f7a4-590d-76716ea70e49/ss1.png/460x996bb.webp" alt="Tic-Tac-More! Victory Screen">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/90/80/de/9080deef-1097-e3ea-a4ea-b17e5c8ceaab/ss2.png/460x996bb.webp" alt="Tic-Tac-More! Game Mode">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="section section-light">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose Tic-Tac-More!</h2>
-                <p>The perfect blend of simplicity and fun</p>
+                <h2>Why You'll Love It</h2>
+                <p>Remember when games were just... fun?</p>
             </div>
-            <div class="features-grid">
+            <div class="feature-card-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Beautiful Design</h3>
-                    <p>Clean, modern interface that's easy on the eyes. Every detail crafted for the best user experience.</p>
+                    <div class="feature-icon">✨</div>
+                    <h3>Clean Interface</h3>
+                    <p>Beautifully simple design that lets you focus on the game. No distractions, no clutter.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Multiple Modes</h3>
+                    <p>Play against friends in multiplayer or challenge our enhanced AI opponent.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📴</div>
-                    <h3>Play Offline</h3>
-                    <p>No internet? No problem! Play anywhere, anytime without needing a connection.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Multiplayer Fun</h3>
-                    <p>Pass and play with friends on the same device. Perfect for quick breaks or long journeys.</p>
+                    <h3>Play Anywhere</h3>
+                    <p>Works completely offline. Perfect for flights, road trips, or waiting rooms.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🚫</div>
                     <h3>No Ads Ever</h3>
-                    <p>Completely ad-free experience. Just pure, uninterrupted gaming fun.</p>
+                    <p>Completely free with zero ads, pop-ups, or interruptions. Just pure fun.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Enhanced AI</h3>
+                    <p>Challenge yourself against improved AI difficulty that provides a real test.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>Lightning Fast</h3>
-                    <p>Instant loading, smooth animations, and responsive gameplay. Zero lag, maximum fun.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💯</div>
-                    <h3>100% Free</h3>
-                    <p>No in-app purchases, no hidden costs. Download once and enjoy forever, completely free!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Play -->
-    <section class="how-to-play">
-        <div class="container">
-            <div class="section-header">
-                <h2>How to Play</h2>
-                <p>Master the game in minutes</p>
-            </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Download & Open</h3>
-                        <p>Get Tic-Tac-More! from the App Store and launch the app. No sign-ups, no registration required.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Choose Your Mode</h3>
-                        <p>Select single-player to play against AI or multiplayer to challenge a friend on the same device.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Make Your Move</h3>
-                        <p>Tap any empty square to place your X or O. Try to get three in a row horizontally, vertically, or diagonally!</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Win & Play Again</h3>
-                        <p>First to get three in a row wins! Tap "New Game" to play another round instantly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Players Are Saying</h2>
-                <p>Join thousands of happy players</p>
-            </div>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Finally, a tic tac toe app that's just... perfect. No ads, no nonsense. Just the classic game done right."</p>
-                    <p class="reviewer">- iOS User</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Love the clean interface! My kids can't stop playing it, and I don't have to worry about ads or in-app purchases."</p>
-                    <p class="reviewer">- Parent Review</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Best tic tac toe app I've found. Works offline, looks great, and is completely free. What more could you want?"</p>
-                    <p class="reviewer">- App Store Review</p>
+                    <p>Tiny 4MB size means quick download and instant gameplay. No waiting.</p>
                 </div>
             </div>
         </div>
@@ -769,41 +304,10 @@
     <section class="download-cta">
         <div class="container">
             <h2>Ready to Play?</h2>
-            <p>Download Tic-Tac-More! now and rediscover the joy of this timeless classic. 
-            It's free, it's fun, and it's waiting for you!</p>
-            <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="btn btn-primary">
+            <p>Download Tic-Tac-More! and rediscover the joy of simple, classic gaming. Completely free, forever!</p>
+            <a href="https://apps.apple.com/us/app/tic-tac-more/id6754807771" class="btn btn-primary btn-large">
                 Download Free on App Store
             </a>
-        </div>
-    </section>
-
-    <!-- Related Apps -->
-    <section class="related-apps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Explore More Apps</h2>
-                <p>Check out our other iOS applications</p>
-            </div>
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-card-icon">🔥</div>
-                    <h3>Fire & Ladders</h3>
-                    <p>A thrilling twist on the classic board game. Race to escape while avoiding fires! 2-6 players with AI mode.</p>
-                    <a href="/fireandladders">Learn More</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-card-icon">🚄</div>
-                    <h3>Fastest Train</h3>
-                    <p>Real-time UK train departures and platform information for almost 3,000 stations.</p>
-                    <a href="/fastesttrain">Learn More</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-card-icon">🐵</div>
-                    <h3>Lingotino</h3>
-                    <p>Learn Italian through fun games and challenges. Coming November 2025!</p>
-                    <a href="/lingotino">Learn More</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -812,7 +316,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Tayloriellos</h3>
-                <p>Creating simple, joyful apps that make life brighter.</p>
+                <p>Creating professional, thoughtfully designed apps that solve real problems. Because great software should be accessible to everyone.</p>
             </div>
             <div class="footer-section">
                 <h3>Our Apps</h3>
@@ -824,7 +328,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Company</h3>
+                <h3>Resources</h3>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/privacy">Privacy Policy</a></li>
@@ -836,5 +340,17 @@
             <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
