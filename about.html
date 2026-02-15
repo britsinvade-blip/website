@@ -104,46 +104,16 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Tayloriellos</h3>
-                <p>Creating professional, thoughtfully designed apps that solve real problems. Because great software should be accessible to everyone.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Our Apps</h3>
-                <ul class="footer-links">
-                    <li><a href="/hearttracker">Cholesterol & Heart Tracker</a></li>
-                    <li><a href="/spettle">Spettle</a></li>
-                    <li><a href="/fireandladders">Fire & Ladders</a></li>
-                    <li><a href="/tictacmore">Tic-Tac-More!</a></li>
-                    <li><a href="/fastesttrain">Fastest Train</a></li>
-                    <li><a href="/lingotino">Lingotino</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Our Socials</h3>
-                <ul class="footer-links">
-                    <li><a href="https://www.instagram.com/tayloriellos/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/tayloriellos" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                    <li><a href="https://www.tiktok.com/@tayloriellos" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-                    <li><a href="https://www.youtube.com/@Tayloriellos" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Robert Taylor (Tayloriellos). All rights reserved.</p>
-        </div>
-    </footer>
+ <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
 
     <script>
         const navbar = document.getElementById('navbar');

@@ -319,35 +319,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Tayloriellos</h3>
-                <p>Creating professional, thoughtfully designed apps that solve real problems. Because great software should be accessible to everyone.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Our Apps</h3>
-                <ul class="footer-links">
-                    <li><a href="/spettle">Spettle</a></li>
-                    <li><a href="/fireandladders">Fire & Ladders</a></li>
-                    <li><a href="/tictacmore">Tic-Tac-More!</a></li>
-                    <li><a href="/fastesttrain">Fastest Train</a></li>
-                    <li><a href="/lingotino">Lingotino</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="https://forms.gle/zZ6RiiQVjieNy7en6">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Robert Taylor (Tayloriellos). All rights reserved.</p>
-        </div>
-    </footer>
+   <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
 
     <!-- Scripts -->
     <script>
