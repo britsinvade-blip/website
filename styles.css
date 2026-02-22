@@ -281,7 +281,7 @@ p { font-size: 1.25rem; margin-bottom: 30px; }
     }
     
     .situation-nav {
-        order: 2;
+        order: 3; /* Nav drops below the stage */
         padding: 0 20px 20px;
         display: flex;
         flex-direction: row;
@@ -293,45 +293,28 @@ p { font-size: 1.25rem; margin-bottom: 30px; }
     .nav-label { width: 100%; text-align: center; }
     
     #spa-stage {
-        order: 3;
+        order: 2; /* Stage shifts above nav */
         height: auto;
         padding: 20px;
     }
     
-.content-wrapper {
+    .content-wrapper {
         flex-direction: column;
         text-align: center;
         gap: 15px; /* Tightened from 20px */
     }
 
-    .text-area { 
-        order: 2; 
-        margin-top: 10px; /* Tightened from 20px */
-        max-width: 100%; 
-    }
-    
-    .visual-area { 
-        justify-content: center; 
-        order: 1; 
-        width: 100%; 
-    }
-    
-    h1 { 
-        font-size: 2.5rem; /* Reduced from 3rem so the text fits better */
-        margin-bottom: 15px;
-    }
-    
+    .text-area { order: 2; margin-top: 10px; max-width: 100%; }
+    .visual-area { justify-content: center; order: 1; width: 100%; }
+    h1 { font-size: 2.5rem; margin-bottom: 15px; } /* Slightly scaled down */
     #cta-area { justify-content: center; }
     
     .tilt-app-icon {
         transform: rotate(0) !important; 
-        max-width: 140px; /* DRASTICALLY REDUCED FROM 220px */
+        max-width: 140px; /* Reduced from 220px */
         margin: 0 auto;
     }
-    
-    .active .tilt-app-icon { 
-        transform: rotate(0) translateX(0) !important; 
-    }
+    .active .tilt-app-icon { transform: rotate(0) translateX(0) !important; }
     
     .secondary-nav {
         order: 4;
@@ -509,6 +492,9 @@ body[data-mode="about"] .nav-btn.active {
     background: var(--studio-navy); color: var(--frictionless-white); transform: translateX(10px); border-color: var(--studio-navy);
 }
 
+/* ============================================
+   APP SCREENSHOT CAROUSEL (Scroll-Snap)
+   ============================================ */
 .app-gallery {
     display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; margin: 40px 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
 }
@@ -560,7 +546,7 @@ body[data-mode="about"] .nav-btn.active {
 .app-card img {
     width: 72px;
     height: 72px;
-    border-radius: 22.5%; /* Authentic Apple Squircle */
+    border-radius: 22.5%; 
     margin-bottom: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -584,7 +570,6 @@ body[data-mode="about"] .nav-btn.active {
     opacity: 0.7;
 }
 
-/* Category Badges inside the cards */
 .app-badge {
     font-size: 0.7rem;
     text-transform: uppercase;

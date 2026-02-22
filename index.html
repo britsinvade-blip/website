@@ -22,8 +22,11 @@
     <meta name="twitter:description" content="Privacy-first, beautifully simple iOS tools and games.">
     <meta name="twitter:image" content="https://www.tayloriellos.co.uk/web-app-manifest-512x512.png">
 
-    <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png">
-    <link rel="apple-touch-icon" href="web-app-manifest-512x512.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Tayloriellos" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,8 +118,7 @@
                 <h1 id="display-title">Life is<br>complicated.</h1>
                 <p id="display-desc">Your apps shouldn't be. Select a situation to see how we help busy humans navigate the day.</p>
                 <div id="cta-area">
-                    <a href="about.html" class="btn-main">Our Story</a>
-                </div>
+                    </div>
             </div>
 
             <div class="visual-area">
@@ -131,8 +133,8 @@
             default: {
                 title: "Life is<br>complicated.",
                 desc: "Your apps shouldn't be. Select a situation to see how we help busy humans navigate the day.",
-                btnText: "Our Story",
-                link: "about.html",
+                btnText: "", /* Intentionally blank to hide the button */
+                link: "",    /* Intentionally blank to hide the button */
                 img: "web-app-manifest-512x512.png",
                 altText: "Tayloriellos App Studio Logo"
             },
@@ -165,7 +167,7 @@
                 desc: "Beautifully simple games designed specifically for the 5-minute gap in your day.",
                 btnText: "Tic-Tac-More",
                 link: "tictacmore.html",
-                btnText2: "Fires & Ladders", /* The Script will automatically inject a 2nd button if this exists! */
+                btnText2: "Fires & Ladders", 
                 link2: "firesandladders.html",
                 img: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/18/c9/f118c936-9c52-8bb0-9b54-26d4c30af211/Placeholder.mill/400x400bb-75.webp",
                 altText: "Tic-Tac-More Game App Icon"
@@ -193,12 +195,18 @@
                 imgElement.alt = appData[mode].altText; 
                 
                 const ctaArea = document.getElementById('cta-area');
-                let buttonsHTML = `<a href="${appData[mode].link}" class="btn-main">${appData[mode].btnText}</a>`;
+                let buttonsHTML = '';
+                
+                /* The code now checks to make sure a button is supposed to be drawn before drawing it! */
+                if (appData[mode].btnText) {
+                    buttonsHTML += `<a href="${appData[mode].link}" class="btn-main">${appData[mode].btnText}</a>`;
+                }
                 
                 /* If the mode has a 2nd button, render it alongside the first */
                 if (appData[mode].btnText2) {
                     buttonsHTML += `<a href="${appData[mode].link2}" class="btn-secondary">${appData[mode].btnText2}</a>`;
                 }
+                
                 ctaArea.innerHTML = buttonsHTML;
 
                 stage.classList.add('active');
