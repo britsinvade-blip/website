@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Spettle | Tayloriellos</title>
+    <meta name="description" content="Split the tab, not the vibes. Spettle does the awkward math for you. Snap a receipt, assign the drinks, and get back to the conversation.">
+    <meta name="keywords" content="split bill app, receipt scanner, tip calculator, finance app, Tayloriellos">
+    <meta name="author" content="Tayloriellos">
+    <link rel="canonical" href="https://www.tayloriellos.co.uk/spettle.html" />
+    
+    <meta property="og:title" content="Spettle | Split the tab, not the vibes.">
+    <meta property="og:description" content="Spettle does the awkward math for you. Snap a receipt, assign the drinks, and get back to the conversation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tayloriellos.co.uk/spettle.html">
+    <meta property="og:image" content="https://www.tayloriellos.co.uk/web-app-manifest-512x512.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spettle | Split the tab, not the vibes.">
+    <meta name="twitter:description" content="Spettle does the awkward math for you. Snap a receipt, assign the drinks, and get back to the conversation.">
+    <meta name="twitter:image" content="https://www.tayloriellos.co.uk/web-app-manifest-512x512.png">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png">
+    <link rel="apple-touch-icon" href="web-app-manifest-512x512.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60c031cb-9c03-40f1-9044-ea4e0c00dae6" data-blockingmode="auto" type="text/javascript"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FFNJK5J7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S1FFNJK5J7');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Spettle",
+      "operatingSystem": "iOS",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "GBP"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Tayloriellos",
+        "url": "https://www.tayloriellos.co.uk/"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body[data-mode="about"] .nav-btn.active {
+            background: var(--color-finance);
+            border-color: var(--color-finance);
+            color: var(--frictionless-white);
+        }
+        body[data-mode="about"] .story-wrapper .btn-main {
+            background: var(--color-finance) !important;
+            border-color: var(--color-finance) !important;
+            color: var(--frictionless-white) !important;
+        }
+    </style>
+</head>
+
+<body data-mode="about">
+
+    <noscript>
+        <div style="background: #0F172A; color: #F8FAFC; padding: 20px; text-align: center; position: relative; z-index: 99999;">
+            This interactive experience requires JavaScript. Please enable it, or email us at hello@tayloriellos.co.uk.
+        </div>
+    </noscript>
+
+    <div class="custom-cursor" id="cursor"></div>
+    <audio id="click-sound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="none"></audio>
+
+    <aside class="sidebar">
+        <header class="brand-anchor">
+            <a href="index.html" class="brand-name">Tayloriellos</a>
+            <span class="brand-sub">Indie App Studio • Tring</span>
+        </header>
+
+        <nav class="situation-nav">
+            <span class="nav-label">Right now...</span>
+            <button class="nav-btn" onclick="window.location.href='index.html#travel'">I'm Commuting</button>
+            <button class="nav-btn" onclick="window.location.href='index.html#health'">I'm Staying Well</button>
+            <button class="nav-btn active" onclick="window.location.href='index.html#finance'">I'm Splitting a Bill</button>
+            <button class="nav-btn" onclick="window.location.href='index.html#games'">I'm Bored</button>
+        </nav>
+
+        <nav class="secondary-nav">
+            <a href="about.html">Our Story</a>
+            <a href="apps.html">Our Apps</a>
+            <a href="privacy/index.html">Privacy</a>
+            <a href="https://forms.gle/zZ6RiiQVjieNy7en6" target="_blank" rel="noopener noreferrer">Contact</a>
+            
+            <div class="social-nav">
+                <a href="https://www.facebook.com/tayloriellos" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/tayloriellos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.98 6.979-.058 1.28-.072 1.688-.072 4.948s.014 3.666.072 4.947c.2 5.22 2.622 6.78 6.98 6.979 1.28.058 1.688.072 4.947.072s3.668-.014 4.947-.072c4.358-.2 6.78-1.76 6.98-6.979.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.948c-.2-5.22-2.622-6.78-6.98-6.979-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@tayloriellos" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.02c-.01 1.63-.55 3.23-1.57 4.45-1.1 1.25-2.7 2-4.41 2.05-1.78.05-3.58-.45-4.95-1.6-1.39-1.18-2.23-2.9-2.26-4.73-.04-1.84.77-3.62 2.14-4.83 1.34-1.18 3.19-1.74 4.96-1.58V13.1c-1.1-.06-2.23.23-3.11.88-.85.63-1.39 1.62-1.44 2.68-.06 1.15.42 2.3 1.22 3.07.8.76 1.95 1.13 3.06 1.05 1.08-.07 2.1-.6 2.73-1.46.61-.83.92-1.85.9-2.88V.02h2.64z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@Tayloriellos" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <main id="spa-stage">
+        <div class="story-wrapper">
+            
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/15/af/a915af86-fd16-456d-7658-e2f6ed77612a/Placeholder.mill/400x400bb-75.webp" 
+                 alt="Spettle App Icon" 
+                 class="tilt-app-icon" 
+                 style="max-width: 140px; margin-bottom: 30px; transform: rotate(-5deg); opacity: 1;">
+
+            <h1>Spettle.</h1>
+            <p class="lead">Split the tab, not the vibes. Spettle does the awkward math for you so you can get back to the conversation.</p>
+            
+            <a href="https://apps.apple.com/app/spettle/id6755959494" 
+               class="btn-main" 
+               target="_blank" 
+               rel="noopener noreferrer">Download on the App Store</a>
+
+            <h2 style="margin-top: 50px;">The End of the Awkward Math.</h2>
+            <p>Group dinners are amazing until the server drops a single, massive receipt in the middle of the table. Suddenly, everyone is passing around a napkin, trying to calculate who owes what, while completely ignoring the tax and the tip.</p>
+
+            <h2>Snap, Split, Settle.</h2>
+            <p>We built Spettle to eliminate that friction completely. Just point your camera at the receipt. Spettle instantly digitizes the items and prices, allowing you to tap and assign them to your friends in seconds.</p>
+            
+            <ul>
+                <li><strong>Smart Scanning:</strong> Uses on-device intelligence to read complex, crumpled restaurant receipts instantly.</li>
+                <li><strong>Fair Tax & Tip:</strong> Automatically distributes the extra costs proportionally, so no one gets stuck overpaying.</li>
+                <li><strong>Quick Share:</strong> Generate a beautifully clean summary card that you can drop straight into the group chat.</li>
+                <li><strong>Absolute Privacy:</strong> Your receipts, your locations, and your social circles never leave your phone. No accounts required.</li>
+            </ul>
+
+            <div class="founder-signoff">
+                <a href="https://apps.apple.com/app/spettle/id6755959494" 
+                   class="btn-main" 
+                   target="_blank" 
+                   rel="noopener noreferrer">Download on the App Store</a><br>
+                <span style="font-weight: 500; font-size: 1rem; opacity: 0.7; font-family: var(--font-body); display:inline-block; margin-top: 15px;">Requires iOS 15.0 or later • Free</span>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('button, a, .nav-btn, .gallery-img').forEach(interactiveElement => {
+            interactiveElement.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+            interactiveElement.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        });
+
+        const sound = document.getElementById('click-sound');
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                if(sound) { sound.volume = 0.1; sound.currentTime = 0; sound.play().catch(()=>{}); }
+            });
+        });
+    </script>
+</body>
+</html>
