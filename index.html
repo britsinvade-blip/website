@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Tayloriellos | Simple Apps for Busy Humans.</title>
-    <meta name="description" content="Tayloriellos is an independent UK app studio building privacy-first, pro-simplicity iOS tools and games. Life is complicated. Your apps shouldn't be.">
-    <meta name="keywords" content="health tracker app, split bill app, UK train times, free iOS games, privacy first apps, Tayloriellos">
+    <title>Tayloriellos - Free iPhone Apps | Privacy-First iOS Tools & Games</title>
+    <meta name="description" content="Free privacy-first iPhone apps from UK indie studio. Download cholesterol tracker, bill splitter, UK train times, ice cream recipes, and puzzle games. No ads, no accounts, complete privacy.">
+    <meta name="keywords" content="free iPhone apps, privacy apps iOS, cholesterol tracker app, bill splitter app, UK train times app, gelato recipe app, tic tac toe game, snakes and ladders app, indie app developer UK, privacy-first apps, no account apps, free iOS tools, simple iPhone apps, UK app studio, health tracking app, bill splitting app free, train departure app UK, ice cream recipe calculator, mobile puzzle games, private health apps">
     <meta name="author" content="Rob Taylor & Mario Picariello">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.tayloriellos.co.uk/" />
 
-    <meta property="og:title" content="Tayloriellos | Life made better.">
-    <meta property="og:description" content="Privacy-first, beautifully simple iOS tools and games. No pop-ups. No data selling.">
+    <meta property="og:title" content="Tayloriellos - Free Privacy-First iPhone Apps & iOS Games">
+    <meta property="og:description" content="6 free iPhone apps with complete privacy. Cholesterol tracker, bill splitter, UK train times, gelato recipes, and puzzle games. No accounts, no ads, no data selling.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.tayloriellos.co.uk/">
     <meta property="og:image" content="https://www.tayloriellos.co.uk/web-app-manifest-512x512.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tayloriellos | Life made better.">
-    <meta name="twitter:description" content="Privacy-first, beautifully simple iOS tools and games.">
+    <meta name="twitter:title" content="Tayloriellos - Free Privacy-First iPhone Apps & iOS Games">
+    <meta name="twitter:description" content="6 free iPhone apps with complete privacy. Cholesterol tracker, bill splitter, UK train times, gelato recipes, and puzzle games. No accounts, no ads, no data selling.">
     <meta name="twitter:image" content="https://www.tayloriellos.co.uk/web-app-manifest-512x512.png">
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -48,7 +48,7 @@
       "name": "Tayloriellos",
       "url": "https://www.tayloriellos.co.uk/",
       "logo": "https://www.tayloriellos.co.uk/web-app-manifest-512x512.png",
-      "description": "An independent app studio building pro-simplicity iOS tools. Built with AI. Designed for Humans.",
+      "description": "Independent UK app studio building privacy-first iOS apps and games. Free tools for health tracking, bill splitting, UK train times, gelato recipes, and casual gaming. No ads, no accounts, complete privacy.",
       "founder": [
         {"@type": "Person", "name": "Rob Taylor"},
         {"@type": "Person", "name": "Mario Picariello"}
@@ -56,7 +56,66 @@
       "sameAs": [
         "https://www.instagram.com/tayloriellos/",
         "https://www.tiktok.com/@tayloriellos",
+        "https://www.facebook.com/tayloriellos",
+        "https://www.youtube.com/@Tayloriellos",
         "https://apps.apple.com/developer/robert-taylor/id1234567890"
+      ],
+      "areaServed": "GB",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Cholesterol Heart Tracker",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "iOS"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Spettle",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "iOS"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Fastest Train",
+            "applicationCategory": "TravelApplication",
+            "operatingSystem": "iOS"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Gelato Wizard",
+            "applicationCategory": "FoodApplication",
+            "operatingSystem": "iOS"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Tic Tac More",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Fires & Ladders",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS"
+          }
+        }
       ]
     }
     </script>
@@ -85,6 +144,7 @@
             <button class="nav-btn" onclick="setMode('travel', this)">I'm Commuting</button>
             <button class="nav-btn" onclick="setMode('health', this)">I'm Staying Well</button>
             <button class="nav-btn" onclick="setMode('finance', this)">I'm Splitting a Bill</button>
+            <button class="nav-btn" onclick="setMode('food', this)">I'm Making Gelato</button>
             <button class="nav-btn" onclick="setMode('games', this)">I'm Bored</button>
         </nav>
 
@@ -162,12 +222,20 @@
                 img: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/15/af/a915af86-fd16-456d-7658-e2f6ed77612a/Placeholder.mill/400x400bb-75.webp",
                 altText: "Spettle Bill Splitting App Icon"
             },
+            food: {
+                title: "Perfect gelato,<br>every batch.",
+                desc: "Gelato Wizard gives you professional-grade recipe tools and real-time scoring. From beginner to sorcerer.",
+                btnText: "Get Gelato Wizard",
+                link: "gelatowizard.html",
+                img: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/30/6a/3f/306a3f93-7647-2b67-8ff8-86d78b98016b/Placeholder.mill/400x400bb-75.webp",
+                altText: "Gelato Wizard App Icon"
+            },
             games: {
                 title: "Kill time,<br>save sanity.",
                 desc: "Beautifully simple games designed specifically for the 5-minute gap in your day.",
                 btnText: "Tic-Tac-More",
                 link: "tictacmore.html",
-                btnText2: "Fires & Ladders", 
+                btnText2: "Fires & Ladders",
                 link2: "firesandladders.html",
                 img: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/18/c9/f118c936-9c52-8bb0-9b54-26d4c30af211/Placeholder.mill/400x400bb-75.webp",
                 altText: "Tic-Tac-More Game App Icon"
