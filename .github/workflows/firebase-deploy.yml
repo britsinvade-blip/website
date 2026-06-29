@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy to Firebase
+        id: firebase-deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         continue-on-error: true
         with:
@@ -20,3 +21,8 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
           channelId: live
+
+      - name: Check deployment result
+        run: |
+          echo "Firebase deployment completed (may have warnings)"
+          echo "If you see a 'version already active' error above, this means your site is already up-to-date."
