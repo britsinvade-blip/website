@@ -73,8 +73,84 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I check live UK train times on my iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Download the free Fastest Train app from the App Store. Open the app and search for any UK train station by name. The app displays live departure times, platform numbers, and train status directly from National Rail's Darwin feed. Save your favorite stations for instant access to departure boards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Fastest Train work at all UK train stations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Fastest Train covers all 2,500+ National Rail stations across England, Scotland, Wales, and Northern Ireland. This includes major hubs like London Paddington, Manchester Piccadilly, Edinburgh Waverley, and Cardiff Central, as well as smaller regional stations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track specific trains in real-time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Version 1.2 introduced train tracking—simply long-press any departure to pin it. You'll see live status updates, full calling points with platform numbers, real-time delays, and coach formation data where available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Fastest Train compare to National Rail app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fastest Train focuses exclusively on live departures and train tracking without ticket sales, hotel bookings, or advertisements cluttering the interface. It's faster to open, shows platform numbers earlier, and includes features like live disruption banners and iPad landscape mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Fastest Train free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Fastest Train is completely free to download and use. The app is supported by discrete advertisements. There are no subscriptions, premium tiers, or in-app purchases."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tayloriellos.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://www.tayloriellos.co.uk/apps.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fastest Train",
+          "item": "https://www.tayloriellos.co.uk/fastesttrain.html"
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         body[data-mode="about"] .nav-btn.active {
             background: var(--color-travel);
@@ -140,6 +216,12 @@
 
     <main id="spa-stage">
         <div class="story-wrapper">
+
+            <nav aria-label="Breadcrumb" style="font-size: 0.875rem; margin-bottom: 20px; opacity: 0.7;">
+                <a href="/" style="color: var(--frictionless-white); text-decoration: none;">Home</a> /
+                <a href="apps.html" style="color: var(--frictionless-white); text-decoration: none;">Apps</a> /
+                <span style="color: var(--frictionless-white);">Fastest Train</span>
+            </nav>
             
             <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/29/70/0a/29700a0b-4cf1-e256-ac28-5b8ea39bfa5e/Placeholder.mill/400x400bb-75.webp" 
                  alt="Fastest Train App Icon" 
@@ -155,9 +237,9 @@
                rel="noopener noreferrer">Download on the App Store</a>
 
             <div class="app-gallery">
-                <img src="images/fastestrain-screen-1.PNG" class="gallery-img" alt="Fastest Train Interface">
-                <img src="images/fastestrain-screen-3.PNG" class="gallery-img" alt="Fastest Train Live Departures">
-                <img src="images/fastestrain-screen-2.PNG" class="gallery-img" alt="Fastest Train Settings">
+                <img src="images/fastestrain-screen-1.PNG" class="gallery-img" alt="Fastest Train app showing live UK train departure times with platform numbers">
+                <img src="images/fastestrain-screen-3.PNG" class="gallery-img" alt="Live National Rail departures board with real-time train status and delays">
+                <img src="images/fastestrain-screen-2.PNG" class="gallery-img" alt="UK train times app settings and favorite stations configuration">
             </div>
 
             <h2>The Commuter's Dilemma</h2>
@@ -180,10 +262,30 @@
                 <li><strong>Zero Clutter:</strong> No ticket sales. No account creation. Just the data you need to get home.</li>
             </ul>
 
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>How do I check live UK train times on my iPhone?</h3>
+            <p>Download the free Fastest Train app from the App Store. Open the app and search for any UK train station by name. The app displays live departure times, platform numbers, and train status directly from National Rail's Darwin feed. Save your favorite stations for instant access to departure boards.</p>
+
+            <h3>Does Fastest Train work at all UK train stations?</h3>
+            <p>Yes! Fastest Train covers all 2,500+ National Rail stations across England, Scotland, Wales, and Northern Ireland. This includes major hubs like London Paddington, Manchester Piccadilly, Edinburgh Waverley, and Cardiff Central, as well as smaller regional stations.</p>
+
+            <h3>Can I track specific trains in real-time?</h3>
+            <p>Absolutely. Version 1.2 introduced train tracking—simply long-press any departure to pin it. You'll see live status updates, full calling points with platform numbers, real-time delays, and coach formation data where available. The app refreshes automatically in the background.</p>
+
+            <h3>How does Fastest Train compare to National Rail app?</h3>
+            <p>Fastest Train focuses exclusively on live departures and train tracking without ticket sales, hotel bookings, or advertisements cluttering the interface. It's faster to open, shows platform numbers earlier (often before station displays), and includes features like live disruption banners and iPad landscape mode for home/office displays.</p>
+
+            <h3>Does the app work offline or require internet?</h3>
+            <p>Fastest Train requires an internet connection to fetch live National Rail data. However, it doesn't track your location, require accounts, or use unnecessary background data. It only connects when you actively check train times.</p>
+
+            <h3>Is Fastest Train free to use?</h3>
+            <p>Yes, Fastest Train is completely free to download and use. The app is supported by discrete advertisements. There are no subscriptions, premium tiers, or in-app purchases. All features including train tracking, disruption alerts, and iPad mode are available to everyone.</p>
+
             <div class="founder-signoff">
-                <a href="https://apps.apple.com/app/fastesttrain/id6754537947" 
-                   class="btn-main" 
-                   target="_blank" 
+                <a href="https://apps.apple.com/app/fastesttrain/id6754537947"
+                   class="btn-main"
+                   target="_blank"
                    rel="noopener noreferrer">Download on the App Store</a><br>
                 <span style="font-weight: 500; font-size: 1rem; opacity: 0.7; font-family: var(--font-body); display:inline-block; margin-top: 15px;">Version 1.2 • iOS 26.0+ • Free with Ads</span>
             </div>
