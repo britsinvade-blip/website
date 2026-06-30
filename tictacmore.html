@@ -71,6 +71,90 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is Tic Tac More different from regular tic-tac-toe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tic Tac More solves the classic tic-tac-toe stalemate problem with infinite mechanics. You can only have three pieces on the board - when you place your fourth piece, your first one disappears. This creates a constantly shifting strategy game where every move matters. The game also offers multiple board sizes (3x3, 4x4, 5x5) for deeper tactical gameplay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Tic Tac More free to download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Tic Tac More is completely free to download and play. There are no in-app purchases, subscriptions, or premium features. Enjoy unlimited games without any cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play Tic Tac More with a friend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Tic Tac More features local multiplayer mode where two players can compete on a single device. Simply pass the phone back and forth for classic face-to-face gaming. You can also practice against the built-in AI opponent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What board sizes are available in Tic Tac More?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tic Tac More offers three board sizes: classic 3x3 grid (get 3 in a row), tactical 4x4 grid (get 4 in a row), and strategic 5x5 grid (get 5 in a row). Larger boards create longer, more complex matches with deeper strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Tic Tac More work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Tic Tac More works completely offline. No internet connection required. All gameplay happens locally on your iPhone, making it perfect for travel, flights, or anywhere without WiFi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account to play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account required. Tic Tac More respects your time and privacy. Simply open the app and start playing immediately. No registration, no login, no data collection."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tayloriellos.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://www.tayloriellos.co.uk/apps.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tic Tac More",
+          "item": "https://www.tayloriellos.co.uk/tictacmore.html"
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     
     <style>
@@ -139,24 +223,31 @@
 
     <main id="spa-stage">
         <div class="story-wrapper">
-            
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/18/c9/f118c936-9c52-8bb0-9b54-26d4c30af211/Placeholder.mill/400x400bb-75.webp" 
-                 alt="Tic-Tac-More App Icon" 
-                 class="tilt-app-icon" 
+
+            <nav aria-label="Breadcrumb" style="font-size: 0.875rem; margin-bottom: 20px; opacity: 0.7;">
+                <a href="/" style="color: var(--studio-navy); text-decoration: none;">Home</a> /
+                <a href="apps.html" style="color: var(--studio-navy); text-decoration: none;">Apps</a> /
+                <span style="color: var(--studio-navy);">Tic Tac More</span>
+            </nav>
+
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/18/c9/f118c936-9c52-8bb0-9b54-26d4c30af211/Placeholder.mill/400x400bb-75.webp"
+                 alt="Tic Tac More app icon featuring infinite disappearing pieces strategy game"
+                 class="tilt-app-icon"
                  style="max-width: 140px; margin-bottom: 30px; transform: rotate(-5deg); opacity: 1;">
 
             <h1>Tic Tac More!</h1>
             <p class="lead">Kill time, save sanity. A beautifully simple twist on a classic, designed for the 5-minute gap in your day.</p>
             
-            <a href="https://apps.apple.com/app/tic-tac-more/id6754807771" 
-               class="btn-main" 
-               target="_blank" 
-               rel="noopener noreferrer">Download on the App Store</a>
+            <a href="https://apps.apple.com/app/tic-tac-more/id6754807771"
+               class="btn-main"
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="gtag('event', 'app_store_click', {'app_name': 'Tic Tac More', 'location': 'hero_button'});">Download on the App Store</a>
 
             <div class="app-gallery">
-                <img src="images/tictacmore-screen-1.PNG" class="gallery-img" alt="Tic-Tac-More Gameplay">
-                <img src="images/tictacmore-screen-2.PNG" class="gallery-img" alt="Tic-Tac-More Infinite Strategy">
-                <img src="images/tictacmore-screen-3.PNG" class="gallery-img" alt="Tic-Tac-More Local Multiplayer">
+                <img src="images/tictacmore-screen-1.PNG" class="gallery-img" alt="Tic Tac More gameplay showing infinite disappearing pieces mechanic on 3x3 grid">
+                <img src="images/tictacmore-screen-2.PNG" class="gallery-img" alt="Tic Tac More strategic moves with multiple board sizes and AI opponent">
+                <img src="images/tictacmore-screen-3.PNG" class="gallery-img" alt="Tic Tac More local multiplayer pass-and-play mode for two players">
             </div>
 
             <h2>The Classic, Solved.</h2>
@@ -175,14 +266,35 @@
                 <li><strong>Two-Player Mode:</strong> Pass-and-play with friends and family on a single device.</li>
                 <li><strong>AI Opponent:</strong> Practice solo against computer opponent with different strategies.</li>
                 <li><strong>Stunning Minimalism:</strong> Clean, crisp aesthetics that look great in both Light and Dark mode.</li>
-                <li><strong>No Accounts Needed:</strong> Open the app and you are instantly playing. Zero setup required.</li>
+                <li><strong>No Accounts Needed:</strong> Open the app and you are instantly playing. Zero setup required. Learn more in our <a href="privacy/index.html" style="color: var(--studio-navy); text-decoration: underline;">privacy policy</a>.</li>
             </ul>
 
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>How is Tic Tac More different from regular tic-tac-toe?</h3>
+            <p>Tic Tac More solves the classic tic-tac-toe stalemate problem with infinite mechanics. You can only have three pieces on the board - when you place your fourth piece, your first one disappears. This creates a constantly shifting strategy game where every move matters. The game also offers multiple board sizes (3x3, 4x4, 5x5) for deeper tactical gameplay.</p>
+
+            <h3>Is Tic Tac More free to download?</h3>
+            <p>Yes, Tic Tac More is completely free to download and play. There are no in-app purchases, subscriptions, or premium features. Enjoy unlimited games without any cost.</p>
+
+            <h3>Can I play Tic Tac More with a friend?</h3>
+            <p>Yes! Tic Tac More features local multiplayer mode where two players can compete on a single device. Simply pass the phone back and forth for classic face-to-face gaming. You can also practice against the built-in AI opponent.</p>
+
+            <h3>What board sizes are available in Tic Tac More?</h3>
+            <p>Tic Tac More offers three board sizes: classic 3x3 grid (get 3 in a row), tactical 4x4 grid (get 4 in a row), and strategic 5x5 grid (get 5 in a row). Larger boards create longer, more complex matches with deeper strategy.</p>
+
+            <h3>Does Tic Tac More work offline?</h3>
+            <p>Yes, Tic Tac More works completely offline. No internet connection required. All gameplay happens locally on your iPhone, making it perfect for travel, flights, or anywhere without WiFi.</p>
+
+            <h3>Do I need to create an account to play?</h3>
+            <p>No account required. Tic Tac More respects your time and privacy. Simply open the app and start playing immediately. No registration, no login, no data collection.</p>
+
             <div class="founder-signoff">
-                <a href="https://apps.apple.com/app/tic-tac-more/id6754807771" 
-                   class="btn-main" 
-                   target="_blank" 
-                   rel="noopener noreferrer">Download on the App Store</a><br>
+                <a href="https://apps.apple.com/app/tic-tac-more/id6754807771"
+                   class="btn-main"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onclick="gtag('event', 'app_store_click', {'app_name': 'Tic Tac More', 'location': 'footer_button'});">Download on the App Store</a><br>
                 <span style="font-weight: 500; font-size: 1rem; opacity: 0.7; font-family: var(--font-body); display:inline-block; margin-top: 15px;">Version 1.1 • iOS 26.0+ • Free with Ads</span>
             </div>
 

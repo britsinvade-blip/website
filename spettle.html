@@ -72,6 +72,98 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I split a restaurant bill with Spettle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Download Spettle from the App Store, open the app, and tap the scan button to photograph your restaurant receipt. The app will automatically detect all items and prices. Simply tap each item to assign it to the person who ordered it. Spettle automatically calculates tax and tip distribution, then generates a shareable summary for your group."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Spettle work with any restaurant receipt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Spettle uses advanced on-device OCR to read virtually any printed restaurant receipt, including handwritten notes and crumpled bills. The app works offline and processes everything locally on your iPhone for maximum privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Spettle free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Spettle is completely free to download and use. There are no subscriptions, in-app purchases, or premium features. Split unlimited restaurant bills without any cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Spettle handle tax and tip splitting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spettle automatically distributes tax and tip amounts proportionally based on each person's subtotal. This ensures fair bill sharing where everyone pays their appropriate share, rather than splitting the total evenly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account to use Spettle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account required. Spettle respects your privacy by processing everything on your device. Your receipts, spending data, and group information never leave your phone or get uploaded to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Spettle for non-restaurant bills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While Spettle is optimized for restaurant receipts, it works with any itemized bill including grocery stores, bars, cafes, and food delivery orders. The smart scanning technology adapts to different receipt formats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I share the split bill with my friends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After assigning items in Spettle, tap the share button to generate a clean summary card. You can send this directly to messaging apps like WhatsApp, iMessage, or share via email. Each person sees exactly what they owe."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tayloriellos.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://www.tayloriellos.co.uk/apps.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Spettle",
+          "item": "https://www.tayloriellos.co.uk/spettle.html"
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     
     <style>
@@ -140,19 +232,26 @@
 
     <main id="spa-stage">
         <div class="story-wrapper">
-            
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/15/af/a915af86-fd16-456d-7658-e2f6ed77612a/Placeholder.mill/400x400bb-75.webp" 
-                 alt="Spettle App Icon" 
-                 class="tilt-app-icon" 
+
+            <nav aria-label="Breadcrumb" style="font-size: 0.875rem; margin-bottom: 20px; opacity: 0.7;">
+                <a href="/" style="color: var(--studio-navy); text-decoration: none;">Home</a> /
+                <a href="apps.html" style="color: var(--studio-navy); text-decoration: none;">Apps</a> /
+                <span style="color: var(--studio-navy);">Spettle</span>
+            </nav>
+
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/15/af/a915af86-fd16-456d-7658-e2f6ed77612a/Placeholder.mill/400x400bb-75.webp"
+                 alt="Spettle bill splitter app icon showing smart receipt scanning for restaurant bills"
+                 class="tilt-app-icon"
                  style="max-width: 140px; margin-bottom: 30px; transform: rotate(-5deg); opacity: 1;">
 
             <h1>Spettle.</h1>
             <p class="lead">Free bill splitter app for group dinners. Scan restaurant receipts, split bills fairly, and calculate tips automatically. No account needed.</p>
             
-            <a href="https://apps.apple.com/app/spettle/id6755959494" 
-               class="btn-main" 
-               target="_blank" 
-               rel="noopener noreferrer">Download on the App Store</a>
+            <a href="https://apps.apple.com/app/spettle/id6755959494"
+               class="btn-main"
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="gtag('event', 'app_store_click', {'app_name': 'Spettle', 'location': 'hero_button'});">Download on the App Store</a>
 
             <h2 style="margin-top: 50px;">Smart Receipt Scanner for Group Bills</h2>
             <p>Group dinners are amazing until the server drops a single restaurant bill in the middle of the table. Suddenly, everyone is trying to calculate who owes what for their items, while completely ignoring the tax and tip calculations.</p>
@@ -164,14 +263,38 @@
                 <li><strong>Smart Scanning:</strong> Uses on-device intelligence to read complex, crumpled restaurant receipts instantly.</li>
                 <li><strong>Fair Tax & Tip:</strong> Automatically distributes the extra costs proportionally, so no one gets stuck overpaying.</li>
                 <li><strong>Quick Share:</strong> Generate a beautifully clean summary card that you can drop straight into the group chat.</li>
-                <li><strong>Absolute Privacy:</strong> Your receipts, your locations, and your social circles never leave your phone. No accounts required.</li>
+                <li><strong>Absolute Privacy:</strong> Your receipts, your locations, and your social circles never leave your phone. No accounts required. Learn more in our <a href="privacy/index.html" style="color: var(--studio-navy); text-decoration: underline;">privacy policy</a>.</li>
             </ul>
 
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>How do I split a restaurant bill with Spettle?</h3>
+            <p>Download Spettle from the App Store, open the app, and tap the scan button to photograph your restaurant receipt. The app will automatically detect all items and prices. Simply tap each item to assign it to the person who ordered it. Spettle automatically calculates tax and tip distribution, then generates a shareable summary for your group.</p>
+
+            <h3>Does Spettle work with any restaurant receipt?</h3>
+            <p>Yes, Spettle uses advanced on-device OCR to read virtually any printed restaurant receipt, including handwritten notes and crumpled bills. The app works offline and processes everything locally on your iPhone for maximum privacy.</p>
+
+            <h3>Is Spettle free to use?</h3>
+            <p>Yes, Spettle is completely free to download and use. There are no subscriptions, in-app purchases, or premium features. Split unlimited restaurant bills without any cost.</p>
+
+            <h3>How does Spettle handle tax and tip splitting?</h3>
+            <p>Spettle automatically distributes tax and tip amounts proportionally based on each person's subtotal. This ensures fair bill sharing where everyone pays their appropriate share, rather than splitting the total evenly.</p>
+
+            <h3>Do I need to create an account to use Spettle?</h3>
+            <p>No account required. Spettle respects your privacy by processing everything on your device. Your receipts, spending data, and group information never leave your phone or get uploaded to any server.</p>
+
+            <h3>Can I use Spettle for non-restaurant bills?</h3>
+            <p>While Spettle is optimized for restaurant receipts, it works with any itemized bill including grocery stores, bars, cafes, and food delivery orders. The smart scanning technology adapts to different receipt formats.</p>
+
+            <h3>How do I share the split bill with my friends?</h3>
+            <p>After assigning items in Spettle, tap the share button to generate a clean summary card. You can send this directly to messaging apps like WhatsApp, iMessage, or share via email. Each person sees exactly what they owe.</p>
+
             <div class="founder-signoff">
-                <a href="https://apps.apple.com/app/spettle/id6755959494" 
-                   class="btn-main" 
-                   target="_blank" 
-                   rel="noopener noreferrer">Download on the App Store</a><br>
+                <a href="https://apps.apple.com/app/spettle/id6755959494"
+                   class="btn-main"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onclick="gtag('event', 'app_store_click', {'app_name': 'Spettle', 'location': 'footer_button'});">Download on the App Store</a><br>
                 <span style="font-weight: 500; font-size: 1rem; opacity: 0.7; font-family: var(--font-body); display:inline-block; margin-top: 15px;">Requires iOS 15.0 or later • Free</span>
             </div>
 
