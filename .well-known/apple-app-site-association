@@ -1,0 +1,8 @@
+{
+  "applinks": {
+    "details": [{
+      "appIDs": ["CDRMX659ML.com.tayloriellos.FastestTrain"],
+      "components": [{ "/": "/t*" }]
+    }]
+  }
+}
