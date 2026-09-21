@@ -9,6 +9,7 @@
     --color-health: #06D6A0;
     --color-finance: #9F7AEA;
     --color-food: #FFA94D;
+    --color-devtools: #38BDF8;
     --font-headline: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition-wipe: 0.8s cubic-bezier(0.77, 0, 0.175, 1);
@@ -33,6 +34,7 @@ body[data-mode="health"] { background-color: var(--color-health); }
 body[data-mode="finance"] { background-color: var(--color-finance); }
 body[data-mode="food"] { background-color: var(--color-food); }
 body[data-mode="games"] { background-color: var(--color-games); }
+body[data-mode="devtools"] { background-color: var(--color-devtools); }
 
 /* ============================================
    LAYOUT: SIDEBAR & MAIN STAGE
@@ -586,3 +588,4 @@ body[data-mode="about"] .nav-btn.active {
 .badge-finance { background: rgba(159, 122, 234, 0.15); color: var(--color-finance); }
 .badge-food { background: rgba(255, 169, 77, 0.15); color: #d67e2c; }
 .badge-games { background: rgba(255, 107, 107, 0.15); color: var(--color-games); }
+.badge-devtools { background: rgba(56, 189, 248, 0.15); color: #0284c7; }
