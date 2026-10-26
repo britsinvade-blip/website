@@ -81,13 +81,8 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Lingotino Product Page -->
-  <url>
-    <loc>https://www.tayloriellos.co.uk/lingotino.html</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Lingotino: lingotino.html is a summary whose canonical is https://www.lingotino.com/,
+       so it isn't listed here. Lingotino's pages are in https://www.lingotino.com/sitemap.xml -->
 
   <!-- Privacy Policy -->
   <url>
