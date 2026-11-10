@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  # Lets you re-run the deploy by hand from the Actions tab (e.g. after fixing permissions)
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -12,17 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # No continue-on-error: if the deploy fails (e.g. a permissions problem),
+      # the run goes red so a stale live site doesn't go unnoticed.
       - name: Deploy to Firebase
         id: firebase-deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
-        continue-on-error: true
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
           channelId: live
-
-      - name: Check deployment result
-        run: |
-          echo "Firebase deployment completed (may have warnings)"
-          echo "If you see a 'version already active' error above, this means your site is already up-to-date."
