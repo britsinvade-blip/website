@@ -171,6 +171,15 @@ p { font-size: 1.25rem; margin-bottom: 30px; }
     backdrop-filter: blur(10px);
 }
 
+/* Links styled as nav buttons (used for apps with their own websites,
+   so search engines see real links). Matches the browser's default button text size. */
+a.nav-btn {
+    display: block;
+    text-decoration: none;
+    font-size: 13.3333px;
+    line-height: normal;
+}
+
 .nav-btn:hover, .nav-btn.active {
     background: white;
     color: var(--studio-navy);

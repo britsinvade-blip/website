@@ -25,13 +25,8 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Cholesterol Heart Tracker Product Page -->
-  <url>
-    <loc>https://www.tayloriellos.co.uk/hearttracker.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- Cholesterol Heart Tracker: hearttracker.html is a summary whose canonical is https://www.hearttracker.app/,
+       so it isn't listed here. Heart Tracker's pages are listed on www.hearttracker.app -->
 
   <!-- Spettle Product Page -->
   <url>
